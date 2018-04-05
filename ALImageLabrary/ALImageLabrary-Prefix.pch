@@ -1,0 +1,18 @@
+//
+//  ALImageLabrary-Prefix.pch
+//  ALImageLabrary
+//
+//  Created by Alexey Leshko on 05.04.18.
+//  Copyright © 2018 Алексей. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+// Common
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+// Pods
+#import <libextobjc/extobjc.h>
+
+#endif
