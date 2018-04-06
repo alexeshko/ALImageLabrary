@@ -1,5 +1,5 @@
 //
-//  ALLoginViewInput.h
+//  ALConnectionService.h
 //  ALImageLabrary
 //
 //  Created by Alexey Leshko on 06/04/2018.
@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ALLoginViewInput <NSObject>
+@interface ALConnectionService : NSObject
 
-- (void)setupInitialState;
++ (instancetype)sharedService;
+
+- (void)startMonitoringNetwork;
+
+- (BOOL)checkInternetConnection;
 
 @end

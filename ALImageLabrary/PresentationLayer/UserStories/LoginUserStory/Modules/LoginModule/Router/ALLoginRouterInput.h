@@ -10,4 +10,6 @@
 
 @protocol ALLoginRouterInput <NSObject>
 
+- (void)openMainModuleWithCurrentIP:(NSString *)currentIP;
+
 @end

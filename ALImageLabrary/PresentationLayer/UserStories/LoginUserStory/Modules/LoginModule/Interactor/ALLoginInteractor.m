@@ -12,6 +12,9 @@
 
 #pragma mark - ALLoginInteractorInput
 
-
+- (BOOL)checkUserForJoin {
+    // Handle check join
+    return YES;
+}
 
 @end

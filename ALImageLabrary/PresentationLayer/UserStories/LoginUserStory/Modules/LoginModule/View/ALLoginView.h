@@ -10,4 +10,8 @@
 
 @interface ALLoginView : ALView
 
+@property (nonatomic, strong, readonly) UIButton *joinButton;
+
+@property (nonatomic, strong, readonly) UILabel *ipLabel;
+
 @end

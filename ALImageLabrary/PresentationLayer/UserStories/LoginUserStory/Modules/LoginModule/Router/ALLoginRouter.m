@@ -14,6 +14,8 @@
 
 #pragma mark - ALLoginRouterInput
 
-
+- (void)openMainModuleWithCurrentIP:(NSString *)currentIP {
+    NSLog(@"openMainModule");
+}
 
 @end
