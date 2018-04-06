@@ -12,6 +12,14 @@
 #import "ALLoginRouterInput.h"
 #import "ALLoginInteractorInput.h"
 
+#import "ALLocationService.h"
+
+@interface ALLoginPresenter () {
+    NSString *_currentIP;
+}
+
+@end
+
 @implementation ALLoginPresenter
 
 #pragma mark - ALLoginModuleInput
@@ -22,6 +30,16 @@
 
 - (void)viewDidLoad {
     [self.view setupInitialState];
+}
+
+- (void)didTouchJoinButton {
+    if ([self.interactor checkUserForJoin]) {
+        [self.router openMainModuleWithCurrentIP:_currentIP];
+    }
+}
+
+- (void)didTakeCurrentIP:(NSString *)currentIP {
+    _currentIP = currentIP;
 }
 
 #pragma mark - Private Methods

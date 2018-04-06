@@ -5,3 +5,24 @@
   Created by Alexey Leshko on 05.04.18.
   Copyright © 2018 HomeSolutions. All rights reserved.
 */
+
+// MARK: - General localizable strings
+
+"general.back" = "BACK";
+"general.next" = "NEXT";
+"general.done" = "DONE";
+"general.ok" = "ОК";
+"general.yes" = "Yes";
+"general.no" = "No";
+
+// MARK: - LoginModules localizable strings
+
+"login.welcome" = "Welcome";
+"login.yourcity" = "Your city";
+"login.yourip" = "Your IP";
+"login.join" = "Join";
+
+// MARK: - Alert localizable strings
+
+"alert.header" = "Caution!";
+"alert.noinet" = "Check your internet connection";

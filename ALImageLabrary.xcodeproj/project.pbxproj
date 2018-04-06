@@ -18,6 +18,18 @@
 		8A8C97102076A7500015ADB2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A8C97122076A7500015ADB2 /* Localizable.strings */; };
 		8A8C97272076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C97212076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m */; };
 		8A8C97282076BDD20015ADB2 /* ALView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C97262076BDD20015ADB2 /* ALView.m */; };
+		8AA866CC2077F4580037C232 /* UIColor+ALColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866CB2077F4580037C232 /* UIColor+ALColors.m */; };
+		8AA866D62077F4830037C232 /* ALDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866CF2077F4830037C232 /* ALDateFormatter.m */; };
+		8AA866D82077F4830037C232 /* ALServerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866D52077F4830037C232 /* ALServerFactory.m */; };
+		8AA866DC2077F4980037C232 /* UIFont+ALFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866DB2077F4980037C232 /* UIFont+ALFonts.m */; };
+		8AA866E52077F4C10037C232 /* ALConnectionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866E12077F4C10037C232 /* ALConnectionService.m */; };
+		8AA866E62077F4C10037C232 /* ALLocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866E42077F4C10037C232 /* ALLocationService.m */; };
+		8AA866F42077F69B0037C232 /* ALAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866EA2077F69B0037C232 /* ALAlertAction.m */; };
+		8AA866F52077F69B0037C232 /* ALAlertDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866EC2077F69B0037C232 /* ALAlertDescription.m */; };
+		8AA866F62077F69B0037C232 /* ALAletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866EF2077F69B0037C232 /* ALAletViewController.m */; };
+		8AA866F72077F69B0037C232 /* UIAlertController+Present.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866F12077F69B0037C232 /* UIAlertController+Present.m */; };
+		8AA866F82077F69B0037C232 /* ALAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866F32077F69B0037C232 /* ALAlertManager.m */; };
+		8AA866FE2077F7D30037C232 /* ALRootRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866FD2077F7D30037C232 /* ALRootRouter.m */; };
 		8B62DE7262795751B4330DF5 /* ALLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364C3A64E39ADC896E8ECCEE /* ALLoginView.m */; };
 		9F51CBBD88E65FE5822816A3 /* ALLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6199F08F58FFCDC063697C4 /* ALLoginViewController.m */; };
 		A4DF7627D05E7D415D50DF03 /* ALLoginPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AA9D8E25791DC2ED1CCB20 /* ALLoginPresenter.m */; };
@@ -52,9 +64,7 @@
 		3B639F6B5A014C177490C52F /* Pods_ALImageLabrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALImageLabrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ABCE2890BD54F1A2306B2EF /* ALLoginRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginRouter.h; sourceTree = "<group>"; };
 		657AA9E6CADCE46CAEB7FB22 /* Pods-ALImageLabrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALImageLabrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALImageLabrary/Pods-ALImageLabrary.debug.xcconfig"; sourceTree = "<group>"; };
-		7DE684D2AC304B47DF62081F /* ALLoginModuleOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginModuleOutput.h; sourceTree = "<group>"; };
 		84BB5924BE6FFDF7BDD5CB20 /* ALLoginViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginViewInput.h; sourceTree = "<group>"; };
-		867F596D940C4574ABDAEAFA /* ALLoginModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginModuleInput.h; sourceTree = "<group>"; };
 		8970AB076EEB84C084C7E179 /* ALLoginInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginInteractorInput.h; sourceTree = "<group>"; };
 		8A8C96D52076A47A0015ADB2 /* ALImageLabrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALImageLabrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8C96D82076A47A0015ADB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +87,35 @@
 		8A8C97222076BDD20015ADB2 /* ALViperModuleTransitionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALViperModuleTransitionHandler.h; sourceTree = "<group>"; };
 		8A8C97252076BDD20015ADB2 /* ALView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALView.h; sourceTree = "<group>"; };
 		8A8C97262076BDD20015ADB2 /* ALView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALView.m; sourceTree = "<group>"; };
+		8AA866C72077F4170037C232 /* ALDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDefines.h; sourceTree = "<group>"; };
+		8AA866C82077F4320037C232 /* ALAssets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALAssets.h; sourceTree = "<group>"; };
+		8AA866CA2077F4580037C232 /* UIColor+ALColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ALColors.h"; sourceTree = "<group>"; };
+		8AA866CB2077F4580037C232 /* UIColor+ALColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ALColors.m"; sourceTree = "<group>"; };
+		8AA866CE2077F4830037C232 /* ALDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDateFormatter.h; sourceTree = "<group>"; };
+		8AA866CF2077F4830037C232 /* ALDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDateFormatter.m; sourceTree = "<group>"; };
+		8AA866D42077F4830037C232 /* ALServerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALServerFactory.h; sourceTree = "<group>"; };
+		8AA866D52077F4830037C232 /* ALServerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALServerFactory.m; sourceTree = "<group>"; };
+		8AA866DA2077F4980037C232 /* UIFont+ALFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ALFonts.h"; sourceTree = "<group>"; };
+		8AA866DB2077F4980037C232 /* UIFont+ALFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ALFonts.m"; sourceTree = "<group>"; };
+		8AA866E02077F4C10037C232 /* ALConnectionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALConnectionService.h; sourceTree = "<group>"; };
+		8AA866E12077F4C10037C232 /* ALConnectionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALConnectionService.m; sourceTree = "<group>"; };
+		8AA866E32077F4C10037C232 /* ALLocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALLocationService.h; sourceTree = "<group>"; };
+		8AA866E42077F4C10037C232 /* ALLocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALLocationService.m; sourceTree = "<group>"; };
+		8AA866E92077F69B0037C232 /* ALAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAlertAction.h; sourceTree = "<group>"; };
+		8AA866EA2077F69B0037C232 /* ALAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAlertAction.m; sourceTree = "<group>"; };
+		8AA866EB2077F69B0037C232 /* ALAlertDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAlertDescription.h; sourceTree = "<group>"; };
+		8AA866EC2077F69B0037C232 /* ALAlertDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAlertDescription.m; sourceTree = "<group>"; };
+		8AA866EE2077F69B0037C232 /* ALAletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAletViewController.h; sourceTree = "<group>"; };
+		8AA866EF2077F69B0037C232 /* ALAletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAletViewController.m; sourceTree = "<group>"; };
+		8AA866F02077F69B0037C232 /* UIAlertController+Present.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Present.h"; sourceTree = "<group>"; };
+		8AA866F12077F69B0037C232 /* UIAlertController+Present.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Present.m"; sourceTree = "<group>"; };
+		8AA866F22077F69B0037C232 /* ALAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAlertManager.h; sourceTree = "<group>"; };
+		8AA866F32077F69B0037C232 /* ALAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAlertManager.m; sourceTree = "<group>"; };
+		8AA866FB2077F7D30037C232 /* ALWindowLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALWindowLevel.h; sourceTree = "<group>"; };
+		8AA866FC2077F7D30037C232 /* ALRootRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRootRouter.h; sourceTree = "<group>"; };
+		8AA866FD2077F7D30037C232 /* ALRootRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRootRouter.m; sourceTree = "<group>"; };
+		8AA866FF2077FA900037C232 /* ALServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALServer.h; sourceTree = "<group>"; };
+		8AA86701207813620037C232 /* ALNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALNotifications.h; sourceTree = "<group>"; };
 		A6199F08F58FFCDC063697C4 /* ALLoginViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginViewController.m; sourceTree = "<group>"; };
 		B2C7F6D16ED6E04E9A7735EB /* ALLoginInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginInteractor.m; sourceTree = "<group>"; };
 		B7A1FAD3F7BAAA156543A3F0 /* ALLoginViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginViewController.h; sourceTree = "<group>"; };
@@ -153,6 +192,7 @@
 			children = (
 				8A8C97142076A79A0015ADB2 /* ApplicationLayer */,
 				8A8C97162076A7CB0015ADB2 /* PresentationLayer */,
+				8AA866DD2077F4C10037C232 /* BusinessLogicLayer */,
 				8A8C970A2076A5AC0015ADB2 /* Resourses */,
 				8A8C970B2076A5C80015ADB2 /* Supporting Files */,
 			);
@@ -225,6 +265,10 @@
 			isa = PBXGroup;
 			children = (
 				8A8C971D2076BDC40015ADB2 /* Common */,
+				8AA866C52077F3CB0037C232 /* Extensions */,
+				8AA866C42077F3B50037C232 /* Constants */,
+				8AA866C62077F3E50037C232 /* Helpers */,
+				8AA866F92077F7D30037C232 /* RootRouter */,
 				8A8C97172076A7DD0015ADB2 /* UserStories */,
 				8A8C96E32076A47A0015ADB2 /* LaunchScreen.storyboard */,
 			);
@@ -250,6 +294,7 @@
 		8A8C971D2076BDC40015ADB2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8AA866E72077F69B0037C232 /* ALAlertManager */,
 				8A8C97232076BDD20015ADB2 /* UIElements */,
 				8A8C971E2076BDD20015ADB2 /* ViperModule */,
 			);
@@ -259,8 +304,8 @@
 		8A8C971E2076BDD20015ADB2 /* ViperModule */ = {
 			isa = PBXGroup;
 			children = (
-				8A8C971F2076BDD20015ADB2 /* ConcreteViperModuleTransitionHandler */,
 				8A8C97222076BDD20015ADB2 /* ALViperModuleTransitionHandler.h */,
+				8A8C971F2076BDD20015ADB2 /* ConcreteViperModuleTransitionHandler */,
 			);
 			path = ViperModule;
 			sourceTree = "<group>";
@@ -291,6 +336,157 @@
 			path = ALView;
 			sourceTree = "<group>";
 		};
+		8AA866C42077F3B50037C232 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866C82077F4320037C232 /* ALAssets.h */,
+				8AA866C72077F4170037C232 /* ALDefines.h */,
+				8AA866FF2077FA900037C232 /* ALServer.h */,
+				8AA86701207813620037C232 /* ALNotifications.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8AA866C52077F3CB0037C232 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866D92077F4980037C232 /* UIFont */,
+				8AA866C92077F4580037C232 /* UIColor */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8AA866C62077F3E50037C232 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866CD2077F4830037C232 /* DateFormatter */,
+				8AA866D32077F4830037C232 /* ServerFactory */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8AA866C92077F4580037C232 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866CA2077F4580037C232 /* UIColor+ALColors.h */,
+				8AA866CB2077F4580037C232 /* UIColor+ALColors.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		8AA866CD2077F4830037C232 /* DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866CE2077F4830037C232 /* ALDateFormatter.h */,
+				8AA866CF2077F4830037C232 /* ALDateFormatter.m */,
+			);
+			path = DateFormatter;
+			sourceTree = "<group>";
+		};
+		8AA866D32077F4830037C232 /* ServerFactory */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866D42077F4830037C232 /* ALServerFactory.h */,
+				8AA866D52077F4830037C232 /* ALServerFactory.m */,
+			);
+			path = ServerFactory;
+			sourceTree = "<group>";
+		};
+		8AA866D92077F4980037C232 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866DA2077F4980037C232 /* UIFont+ALFonts.h */,
+				8AA866DB2077F4980037C232 /* UIFont+ALFonts.m */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		8AA866DD2077F4C10037C232 /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866DE2077F4C10037C232 /* Services */,
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		8AA866DE2077F4C10037C232 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866DF2077F4C10037C232 /* ConnectionService */,
+				8AA866E22077F4C10037C232 /* LocationService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8AA866DF2077F4C10037C232 /* ConnectionService */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866E02077F4C10037C232 /* ALConnectionService.h */,
+				8AA866E12077F4C10037C232 /* ALConnectionService.m */,
+			);
+			path = ConnectionService;
+			sourceTree = "<group>";
+		};
+		8AA866E22077F4C10037C232 /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866E32077F4C10037C232 /* ALLocationService.h */,
+				8AA866E42077F4C10037C232 /* ALLocationService.m */,
+			);
+			path = LocationService;
+			sourceTree = "<group>";
+		};
+		8AA866E72077F69B0037C232 /* ALAlertManager */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866F22077F69B0037C232 /* ALAlertManager.h */,
+				8AA866F32077F69B0037C232 /* ALAlertManager.m */,
+				8AA866E82077F69B0037C232 /* Elements */,
+				8AA866ED2077F69B0037C232 /* Helpers */,
+			);
+			path = ALAlertManager;
+			sourceTree = "<group>";
+		};
+		8AA866E82077F69B0037C232 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866E92077F69B0037C232 /* ALAlertAction.h */,
+				8AA866EA2077F69B0037C232 /* ALAlertAction.m */,
+				8AA866EB2077F69B0037C232 /* ALAlertDescription.h */,
+				8AA866EC2077F69B0037C232 /* ALAlertDescription.m */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		8AA866ED2077F69B0037C232 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866EE2077F69B0037C232 /* ALAletViewController.h */,
+				8AA866EF2077F69B0037C232 /* ALAletViewController.m */,
+				8AA866F02077F69B0037C232 /* UIAlertController+Present.h */,
+				8AA866F12077F69B0037C232 /* UIAlertController+Present.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8AA866F92077F7D30037C232 /* RootRouter */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866FC2077F7D30037C232 /* ALRootRouter.h */,
+				8AA866FD2077F7D30037C232 /* ALRootRouter.m */,
+				8AA866FA2077F7D30037C232 /* Helpers */,
+			);
+			path = RootRouter;
+			sourceTree = "<group>";
+		};
+		8AA866FA2077F7D30037C232 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8AA866FB2077F7D30037C232 /* ALWindowLevel.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		9A0ED0E4AC926B383558F6E0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,8 +515,6 @@
 		C540F3A884665FF1EF9503A9 /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
-				867F596D940C4574ABDAEAFA /* ALLoginModuleInput.h */,
-				7DE684D2AC304B47DF62081F /* ALLoginModuleOutput.h */,
 				A100BC41C8F2AB35FA85AA3A /* Assembly */,
 				F2CBE13C9FD03E820660183A /* Router */,
 				C95AA20DEAD3E070D0DE784E /* Interactor */,
@@ -569,15 +763,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA866F82077F69B0037C232 /* ALAlertManager.m in Sources */,
 				8A8C96E82076A47A0015ADB2 /* main.m in Sources */,
 				8A8C96DA2076A47A0015ADB2 /* AppDelegate.m in Sources */,
+				8AA866F42077F69B0037C232 /* ALAlertAction.m in Sources */,
 				45F2FBB402940DD685A36213 /* ALLoginAssembly.m in Sources */,
+				8AA866F52077F69B0037C232 /* ALAlertDescription.m in Sources */,
 				85D535F9FB21913197D83856 /* ALLoginRouter.m in Sources */,
 				EE8D97186F7D2C1B5F540006 /* ALLoginInteractor.m in Sources */,
 				A4DF7627D05E7D415D50DF03 /* ALLoginPresenter.m in Sources */,
+				8AA866F72077F69B0037C232 /* UIAlertController+Present.m in Sources */,
+				8AA866CC2077F4580037C232 /* UIColor+ALColors.m in Sources */,
+				8AA866E52077F4C10037C232 /* ALConnectionService.m in Sources */,
 				9F51CBBD88E65FE5822816A3 /* ALLoginViewController.m in Sources */,
+				8AA866DC2077F4980037C232 /* UIFont+ALFonts.m in Sources */,
+				8AA866E62077F4C10037C232 /* ALLocationService.m in Sources */,
+				8AA866FE2077F7D30037C232 /* ALRootRouter.m in Sources */,
+				8AA866F62077F69B0037C232 /* ALAletViewController.m in Sources */,
 				8A8C97272076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m in Sources */,
+				8AA866D62077F4830037C232 /* ALDateFormatter.m in Sources */,
 				8B62DE7262795751B4330DF5 /* ALLoginView.m in Sources */,
+				8AA866D82077F4830037C232 /* ALServerFactory.m in Sources */,
 				8A8C97282076BDD20015ADB2 /* ALView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

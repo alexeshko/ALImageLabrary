@@ -15,7 +15,7 @@
 
 @implementation ALLoginAssembly
 
-+ (UIViewController *)createModuleWithConfiguration:(void(^)(id<ALLoginModuleInput> input))configuration {
++ (UIViewController *)createModuleWithoutConfiguration {
     ALLoginViewController *view = [[ALLoginViewController alloc] init];
     ALLoginInteractor *interactor = [[ALLoginInteractor alloc] init];
     ALLoginPresenter *presenter = [[ALLoginPresenter alloc] init];
@@ -28,10 +28,6 @@
     presenter.interactor = interactor;
 
     router.transitionHandler = view;
-
-    if (configuration) {
-        configuration(presenter);
-    }
 
     return view;
 }

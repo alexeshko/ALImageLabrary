@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol ALLoginModuleInput;
-
 @interface ALLoginAssembly : NSObject
 
-+ (UIViewController *)createModuleWithConfiguration:(void(^)(id<ALLoginModuleInput> input))configuration;
++ (UIViewController *)createModuleWithoutConfiguration;
 
 @end

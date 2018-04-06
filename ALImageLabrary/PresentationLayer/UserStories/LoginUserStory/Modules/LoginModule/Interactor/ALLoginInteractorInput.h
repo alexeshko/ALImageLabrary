@@ -10,4 +10,6 @@
 
 @protocol ALLoginInteractorInput <NSObject>
 
+- (BOOL)checkUserForJoin;
+
 @end

@@ -12,4 +12,8 @@
 
 - (void)viewDidLoad;
 
+- (void)didTouchJoinButton;
+
+- (void)didTakeCurrentIP:(NSString *)currentIP;
+
 @end
