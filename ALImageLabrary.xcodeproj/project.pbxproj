@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45F2FBB402940DD685A36213 /* ALLoginAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F308BFBD324DAC3F73454501 /* ALLoginAssembly.m */; };
+		85D535F9FB21913197D83856 /* ALLoginRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1415E7C065EFFED6255574AE /* ALLoginRouter.m */; };
 		8A8C96DA2076A47A0015ADB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C96D92076A47A0015ADB2 /* AppDelegate.m */; };
 		8A8C96E22076A47A0015ADB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8C96E12076A47A0015ADB2 /* Assets.xcassets */; };
 		8A8C96E52076A47A0015ADB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8C96E32076A47A0015ADB2 /* LaunchScreen.storyboard */; };
@@ -14,7 +16,13 @@
 		8A8C96F22076A47B0015ADB2 /* ALImageLabraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C96F12076A47B0015ADB2 /* ALImageLabraryTests.m */; };
 		8A8C96FD2076A47B0015ADB2 /* ALImageLabraryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C96FC2076A47B0015ADB2 /* ALImageLabraryUITests.m */; };
 		8A8C97102076A7500015ADB2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A8C97122076A7500015ADB2 /* Localizable.strings */; };
+		8A8C97272076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C97212076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m */; };
+		8A8C97282076BDD20015ADB2 /* ALView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C97262076BDD20015ADB2 /* ALView.m */; };
+		8B62DE7262795751B4330DF5 /* ALLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364C3A64E39ADC896E8ECCEE /* ALLoginView.m */; };
+		9F51CBBD88E65FE5822816A3 /* ALLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6199F08F58FFCDC063697C4 /* ALLoginViewController.m */; };
+		A4DF7627D05E7D415D50DF03 /* ALLoginPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AA9D8E25791DC2ED1CCB20 /* ALLoginPresenter.m */; };
 		A7F631F4DBF336957EB22CFB /* Pods_ALImageLabrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B639F6B5A014C177490C52F /* Pods_ALImageLabrary.framework */; };
+		EE8D97186F7D2C1B5F540006 /* ALLoginInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7F6D16ED6E04E9A7735EB /* ALLoginInteractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +43,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CD3FC816DA919A15F3627AF /* ALLoginView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginView.h; sourceTree = "<group>"; };
+		1415E7C065EFFED6255574AE /* ALLoginRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginRouter.m; sourceTree = "<group>"; };
+		155BC646854809381FD8793C /* ALLoginInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginInteractor.h; sourceTree = "<group>"; };
 		352E54C107CEC9E42EEB617C /* Pods-ALImageLabrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALImageLabrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALImageLabrary/Pods-ALImageLabrary.release.xcconfig"; sourceTree = "<group>"; };
+		364C3A64E39ADC896E8ECCEE /* ALLoginView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginView.m; sourceTree = "<group>"; };
+		39AA9D8E25791DC2ED1CCB20 /* ALLoginPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginPresenter.m; sourceTree = "<group>"; };
 		3B639F6B5A014C177490C52F /* Pods_ALImageLabrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALImageLabrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ABCE2890BD54F1A2306B2EF /* ALLoginRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginRouter.h; sourceTree = "<group>"; };
 		657AA9E6CADCE46CAEB7FB22 /* Pods-ALImageLabrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALImageLabrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALImageLabrary/Pods-ALImageLabrary.debug.xcconfig"; sourceTree = "<group>"; };
+		7DE684D2AC304B47DF62081F /* ALLoginModuleOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginModuleOutput.h; sourceTree = "<group>"; };
+		84BB5924BE6FFDF7BDD5CB20 /* ALLoginViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginViewInput.h; sourceTree = "<group>"; };
+		867F596D940C4574ABDAEAFA /* ALLoginModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginModuleInput.h; sourceTree = "<group>"; };
+		8970AB076EEB84C084C7E179 /* ALLoginInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginInteractorInput.h; sourceTree = "<group>"; };
 		8A8C96D52076A47A0015ADB2 /* ALImageLabrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALImageLabrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8C96D82076A47A0015ADB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A8C96D92076A47A0015ADB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +72,19 @@
 		8A8C97112076A7500015ADB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8A8C97132076A7530015ADB2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8A8C97182076A8600015ADB2 /* ALImageLabrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALImageLabrary-Prefix.pch"; sourceTree = "<group>"; };
+		8A8C97202076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ALViperModuleTransitionHandler.h"; sourceTree = "<group>"; };
+		8A8C97212076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ALViperModuleTransitionHandler.m"; sourceTree = "<group>"; };
+		8A8C97222076BDD20015ADB2 /* ALViperModuleTransitionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALViperModuleTransitionHandler.h; sourceTree = "<group>"; };
+		8A8C97252076BDD20015ADB2 /* ALView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALView.h; sourceTree = "<group>"; };
+		8A8C97262076BDD20015ADB2 /* ALView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALView.m; sourceTree = "<group>"; };
+		A6199F08F58FFCDC063697C4 /* ALLoginViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginViewController.m; sourceTree = "<group>"; };
+		B2C7F6D16ED6E04E9A7735EB /* ALLoginInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginInteractor.m; sourceTree = "<group>"; };
+		B7A1FAD3F7BAAA156543A3F0 /* ALLoginViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginViewController.h; sourceTree = "<group>"; };
+		C05C51A2BBBCF7A3D3012090 /* ALLoginAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginAssembly.h; sourceTree = "<group>"; };
+		D17B0766042231EA9C39EEA1 /* ALLoginRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginRouterInput.h; sourceTree = "<group>"; };
+		D8F306B4B9812511B9A5800C /* ALLoginPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginPresenter.h; sourceTree = "<group>"; };
+		F308BFBD324DAC3F73454501 /* ALLoginAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginAssembly.m; sourceTree = "<group>"; };
+		FC3564E253F0FDB967A5C110 /* ALLoginViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginViewOutput.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +113,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53326CC5D3C6582FA46B322D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84BB5924BE6FFDF7BDD5CB20 /* ALLoginViewInput.h */,
+				FC3564E253F0FDB967A5C110 /* ALLoginViewOutput.h */,
+				B7A1FAD3F7BAAA156543A3F0 /* ALLoginViewController.h */,
+				A6199F08F58FFCDC063697C4 /* ALLoginViewController.m */,
+				0CD3FC816DA919A15F3627AF /* ALLoginView.h */,
+				364C3A64E39ADC896E8ECCEE /* ALLoginView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8A8C96CC2076A47A0015ADB2 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +153,6 @@
 			children = (
 				8A8C97142076A79A0015ADB2 /* ApplicationLayer */,
 				8A8C97162076A7CB0015ADB2 /* PresentationLayer */,
-				8A8C96E32076A47A0015ADB2 /* LaunchScreen.storyboard */,
 				8A8C970A2076A5AC0015ADB2 /* Resourses */,
 				8A8C970B2076A5C80015ADB2 /* Supporting Files */,
 			);
@@ -181,7 +224,9 @@
 		8A8C97162076A7CB0015ADB2 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8A8C971D2076BDC40015ADB2 /* Common */,
 				8A8C97172076A7DD0015ADB2 /* UserStories */,
+				8A8C96E32076A47A0015ADB2 /* LaunchScreen.storyboard */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -189,8 +234,78 @@
 		8A8C97172076A7DD0015ADB2 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
+				8A8C971C2076BB060015ADB2 /* LoginUserStory */,
 			);
 			path = UserStories;
+			sourceTree = "<group>";
+		};
+		8A8C971C2076BB060015ADB2 /* LoginUserStory */ = {
+			isa = PBXGroup;
+			children = (
+				9A0ED0E4AC926B383558F6E0 /* Modules */,
+			);
+			path = LoginUserStory;
+			sourceTree = "<group>";
+		};
+		8A8C971D2076BDC40015ADB2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8A8C97232076BDD20015ADB2 /* UIElements */,
+				8A8C971E2076BDD20015ADB2 /* ViperModule */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8A8C971E2076BDD20015ADB2 /* ViperModule */ = {
+			isa = PBXGroup;
+			children = (
+				8A8C971F2076BDD20015ADB2 /* ConcreteViperModuleTransitionHandler */,
+				8A8C97222076BDD20015ADB2 /* ALViperModuleTransitionHandler.h */,
+			);
+			path = ViperModule;
+			sourceTree = "<group>";
+		};
+		8A8C971F2076BDD20015ADB2 /* ConcreteViperModuleTransitionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				8A8C97202076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.h */,
+				8A8C97212076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m */,
+			);
+			path = ConcreteViperModuleTransitionHandler;
+			sourceTree = "<group>";
+		};
+		8A8C97232076BDD20015ADB2 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				8A8C97242076BDD20015ADB2 /* ALView */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		8A8C97242076BDD20015ADB2 /* ALView */ = {
+			isa = PBXGroup;
+			children = (
+				8A8C97252076BDD20015ADB2 /* ALView.h */,
+				8A8C97262076BDD20015ADB2 /* ALView.m */,
+			);
+			path = ALView;
+			sourceTree = "<group>";
+		};
+		9A0ED0E4AC926B383558F6E0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C540F3A884665FF1EF9503A9 /* LoginModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A100BC41C8F2AB35FA85AA3A /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				C05C51A2BBBCF7A3D3012090 /* ALLoginAssembly.h */,
+				F308BFBD324DAC3F73454501 /* ALLoginAssembly.m */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		A438D5E0641A7FF8A1E39CEA /* Frameworks */ = {
@@ -201,6 +316,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C540F3A884665FF1EF9503A9 /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				867F596D940C4574ABDAEAFA /* ALLoginModuleInput.h */,
+				7DE684D2AC304B47DF62081F /* ALLoginModuleOutput.h */,
+				A100BC41C8F2AB35FA85AA3A /* Assembly */,
+				F2CBE13C9FD03E820660183A /* Router */,
+				C95AA20DEAD3E070D0DE784E /* Interactor */,
+				FC30D203B555F52A590EB1B7 /* Presenter */,
+				53326CC5D3C6582FA46B322D /* View */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		C95AA20DEAD3E070D0DE784E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8970AB076EEB84C084C7E179 /* ALLoginInteractorInput.h */,
+				155BC646854809381FD8793C /* ALLoginInteractor.h */,
+				B2C7F6D16ED6E04E9A7735EB /* ALLoginInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		E20EC9ACE67F77915C6FBD25 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +347,25 @@
 				352E54C107CEC9E42EEB617C /* Pods-ALImageLabrary.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F2CBE13C9FD03E820660183A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D17B0766042231EA9C39EEA1 /* ALLoginRouterInput.h */,
+				4ABCE2890BD54F1A2306B2EF /* ALLoginRouter.h */,
+				1415E7C065EFFED6255574AE /* ALLoginRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FC30D203B555F52A590EB1B7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D8F306B4B9812511B9A5800C /* ALLoginPresenter.h */,
+				39AA9D8E25791DC2ED1CCB20 /* ALLoginPresenter.m */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +434,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = "Алексей";
+				ORGANIZATIONNAME = HomeSolutions;
 				TargetAttributes = {
 					8A8C96D42076A47A0015ADB2 = {
 						CreatedOnToolsVersion = 9.2;
@@ -413,6 +571,14 @@
 			files = (
 				8A8C96E82076A47A0015ADB2 /* main.m in Sources */,
 				8A8C96DA2076A47A0015ADB2 /* AppDelegate.m in Sources */,
+				45F2FBB402940DD685A36213 /* ALLoginAssembly.m in Sources */,
+				85D535F9FB21913197D83856 /* ALLoginRouter.m in Sources */,
+				EE8D97186F7D2C1B5F540006 /* ALLoginInteractor.m in Sources */,
+				A4DF7627D05E7D415D50DF03 /* ALLoginPresenter.m in Sources */,
+				9F51CBBD88E65FE5822816A3 /* ALLoginViewController.m in Sources */,
+				8A8C97272076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m in Sources */,
+				8B62DE7262795751B4330DF5 /* ALLoginView.m in Sources */,
+				8A8C97282076BDD20015ADB2 /* ALView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,7 +3,7 @@
 //  ALImageLabraryUITests
 //
 //  Created by Alexey Leshko on 05.04.18.
-//  Copyright © 2018 Алексей. All rights reserved.
+//  Copyright © 2018 HomeSolutions. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
