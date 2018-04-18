@@ -31,7 +31,10 @@
 - (id)init {
     self = [super init];
     if (self) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLocationAction:) name:ALLoginUserLocation object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(userLocationAction:)
+                                                     name:ALLoginUserLocation
+                                                   object:nil];
     }
     return self;
 }
