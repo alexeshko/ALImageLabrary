@@ -93,13 +93,37 @@ static id _sharedFactory;
                                              parameters:parameters
                                                 success:^(AFRKHTTPRequestOperation *operation, id responseObject) {
                                                     if (completion) {
-                                                        completion(responseObject);
+                                                        NSDictionary *jsonData = [self convertResponseToDictionary:responseObject];
+                                                        completion(jsonData);
                                                     }
                                                 } failure:^(AFRKHTTPRequestOperation *operation, NSError *error) {
                                                     if (completion) {
                                                         completion(error);
                                                     }
                                                 }];
+}
+
+- (void)mappingRequestWithPathPattern:(NSString *)pathPattern
+                           parameters:(NSDictionary *)parameters
+                    completionHandler:(void (^)(id data))completion {
+    [[RKObjectManager sharedManager] getObjectsAtPath:pathPattern
+                                           parameters:parameters
+                                              success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                  if (completion) {
+                                                      completion(mappingResult.array);
+                                                  }
+                                              } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                  if (completion) {
+                                                      completion(error);
+                                                  }
+                                              }];
+}
+
+- (NSDictionary *)convertResponseToDictionary:(id)response {
+    NSError *error;
+    return [NSJSONSerialization JSONObjectWithData:response
+                                           options:NSJSONReadingMutableContainers
+                                             error:&error];
 }
 
 @end
