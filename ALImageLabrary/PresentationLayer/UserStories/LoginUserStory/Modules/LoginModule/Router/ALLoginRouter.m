@@ -10,12 +10,18 @@
 
 #import "ALViperModuleTransitionHandler.h"
 
+#import "ALMainAssembly.h"
+#import "ALMainModuleInput.h"
+
 @implementation ALLoginRouter
 
 #pragma mark - ALLoginRouterInput
 
 - (void)openMainModuleWithCurrentIP:(NSString *)currentIP {
-    NSLog(@"openMainModule");
+    UIViewController *controller = [ALMainAssembly createModuleWithConfiguration:^(id<ALMainModuleInput> input) {
+        [input configureWithCurrentIP:currentIP];
+    }];
+    [self.transitionHandler openModuleController:controller animated:YES];
 }
 
 @end

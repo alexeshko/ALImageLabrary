@@ -14,4 +14,6 @@
 
 @property (nonatomic, weak) id<ALMainModuleOutput> moduleOutput;
 
+- (void)configureWithCurrentIP:(NSString *)currentIP;
+
 @end

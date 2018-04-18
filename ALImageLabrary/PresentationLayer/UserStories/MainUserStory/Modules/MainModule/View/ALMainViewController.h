@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "ALMainViewInput.h"
-#import "STViperModuleTransitionHandler.h"
+#import "ALViperModuleTransitionHandler.h"
 
 @protocol ALMainViewOutput;
 
-@interface ALMainViewController : UIViewController <ALMainViewInput, STViperModuleTransitionHandler>
+@interface ALMainViewController : UIViewController <ALMainViewInput, ALViperModuleTransitionHandler>
 
 @property (nonatomic, strong) id<ALMainViewOutput> output;
 

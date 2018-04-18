@@ -94,12 +94,14 @@ static id _sharedService;
             NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data
                                                                      options:NSJSONReadingMutableContainers
                                                                        error:&error];
-            [_userLocation setObject:[jsonData valueForKey:@"city"] forKey:@"city"];
-            [_userLocation setObject:[jsonData valueForKey:@"query"] forKey:@"ip"];
-            [_userLocation setObject:[jsonData valueForKey:@"lon"] forKey:@"longitude"];
-            [_userLocation setObject:[jsonData valueForKey:@"lon"] forKey:@"longitude"];
-            
-            [[NSNotificationCenter defaultCenter] postNotificationName:ALLoginUserLocation object:nil userInfo:_userLocation];
+            if (jsonData) {
+                [_userLocation setObject:[jsonData valueForKey:@"city"] forKey:@"city"];
+                [_userLocation setObject:[jsonData valueForKey:@"query"] forKey:@"ip"];
+                [_userLocation setObject:[jsonData valueForKey:@"lon"] forKey:@"longitude"];
+                [_userLocation setObject:[jsonData valueForKey:@"lon"] forKey:@"longitude"];
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:ALLoginUserLocation object:nil userInfo:_userLocation];
+            }
         }
     }];
 }

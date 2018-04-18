@@ -8,8 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class ALMainTableItem;
+
 @protocol ALMainViewOutput <NSObject>
 
 - (void)viewDidLoad;
+
+- (void)didTouchQuitButton;
+- (void)didTouchBackButton;
+- (void)didTouchNextButton;
+
+- (NSInteger)numberOfRowsInSection;
+- (ALMainTableItem *)itemAtIndex:(NSInteger)index;
 
 @end

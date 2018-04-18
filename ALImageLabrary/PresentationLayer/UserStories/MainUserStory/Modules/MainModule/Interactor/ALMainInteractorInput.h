@@ -10,4 +10,10 @@
 
 @protocol ALMainInteractorInput <NSObject>
 
+- (void)getCollectionItemsWithPage:(NSInteger)page completionHandler:(void (^)(id data))completion;
+
+- (BOOL)checkStatusOKFromResponse:(id)response;
+
+- (BOOL)checkInternetConnectionAvailability;
+
 @end

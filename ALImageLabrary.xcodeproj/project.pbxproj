@@ -11,6 +11,7 @@
 		662964F66CE4F71442647584 /* ALMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C182C8CE622129A728471A /* ALMainView.m */; };
 		6DD8B611494E8AA69CDE03F5 /* ALMainInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A6197FCCA087DD0C578C68E9 /* ALMainInteractor.m */; };
 		85D535F9FB21913197D83856 /* ALLoginRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1415E7C065EFFED6255574AE /* ALLoginRouter.m */; };
+		8A4CFCB02087C0AE007FAF59 /* ALMainTableItemImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CFCAF2087C0AE007FAF59 /* ALMainTableItemImage.m */; };
 		8A6525A29D9EE390292B2A3F /* ALMainRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A12CDE3E64DF327FE1F40FDF /* ALMainRouter.m */; };
 		8A8C96DA2076A47A0015ADB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C96D92076A47A0015ADB2 /* AppDelegate.m */; };
 		8A8C96E22076A47A0015ADB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8C96E12076A47A0015ADB2 /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 		8A8C97102076A7500015ADB2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A8C97122076A7500015ADB2 /* Localizable.strings */; };
 		8A8C97272076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C97212076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m */; };
 		8A8C97282076BDD20015ADB2 /* ALView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C97262076BDD20015ADB2 /* ALView.m */; };
+		8A8F31D720877F2D00F9C026 /* ALMainTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F31D620877F2D00F9C026 /* ALMainTableCell.m */; };
+		8A8F31DA20877FE900F9C026 /* ALMainTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F31D920877FE900F9C026 /* ALMainTableItem.m */; };
 		8AA866CC2077F4580037C232 /* UIColor+ALColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866CB2077F4580037C232 /* UIColor+ALColors.m */; };
 		8AA866D62077F4830037C232 /* ALDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866CF2077F4830037C232 /* ALDateFormatter.m */; };
 		8AA866D82077F4830037C232 /* ALServerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866D52077F4830037C232 /* ALServerFactory.m */; };
@@ -80,6 +83,8 @@
 		7FAD8332244C68C8183A2FA8 /* ALMainAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainAssembly.m; sourceTree = "<group>"; };
 		84BB5924BE6FFDF7BDD5CB20 /* ALLoginViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginViewInput.h; sourceTree = "<group>"; };
 		8970AB076EEB84C084C7E179 /* ALLoginInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginInteractorInput.h; sourceTree = "<group>"; };
+		8A4CFCAE2087C0AE007FAF59 /* ALMainTableItemImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMainTableItemImage.h; sourceTree = "<group>"; };
+		8A4CFCAF2087C0AE007FAF59 /* ALMainTableItemImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALMainTableItemImage.m; sourceTree = "<group>"; };
 		8A8C96D52076A47A0015ADB2 /* ALImageLabrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALImageLabrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8C96D82076A47A0015ADB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A8C96D92076A47A0015ADB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +106,10 @@
 		8A8C97222076BDD20015ADB2 /* ALViperModuleTransitionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALViperModuleTransitionHandler.h; sourceTree = "<group>"; };
 		8A8C97252076BDD20015ADB2 /* ALView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALView.h; sourceTree = "<group>"; };
 		8A8C97262076BDD20015ADB2 /* ALView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALView.m; sourceTree = "<group>"; };
+		8A8F31D520877F2D00F9C026 /* ALMainTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMainTableCell.h; sourceTree = "<group>"; };
+		8A8F31D620877F2D00F9C026 /* ALMainTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMainTableCell.m; sourceTree = "<group>"; };
+		8A8F31D820877FE900F9C026 /* ALMainTableItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMainTableItem.h; sourceTree = "<group>"; };
+		8A8F31D920877FE900F9C026 /* ALMainTableItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALMainTableItem.m; sourceTree = "<group>"; };
 		8AA866C72077F4170037C232 /* ALDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDefines.h; sourceTree = "<group>"; };
 		8AA866C82077F4320037C232 /* ALAssets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALAssets.h; sourceTree = "<group>"; };
 		8AA866CA2077F4580037C232 /* UIColor+ALColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ALColors.h"; sourceTree = "<group>"; };
@@ -185,6 +194,7 @@
 				F537B27CCE77D27C7808777D /* ALMainViewController.m */,
 				A25B777E28259BDDABC2D5F2 /* ALMainView.h */,
 				A7C182C8CE622129A728471A /* ALMainView.m */,
+				8A8F31D420877EEB00F9C026 /* Models */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,6 +238,26 @@
 				7FAD8332244C68C8183A2FA8 /* ALMainAssembly.m */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		8A4CFCB12087C67F007FAF59 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A8F31D520877F2D00F9C026 /* ALMainTableCell.h */,
+				8A8F31D620877F2D00F9C026 /* ALMainTableCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8A4CFCB22087C685007FAF59 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				8A8F31D820877FE900F9C026 /* ALMainTableItem.h */,
+				8A8F31D920877FE900F9C026 /* ALMainTableItem.m */,
+				8A4CFCAE2087C0AE007FAF59 /* ALMainTableItemImage.h */,
+				8A4CFCAF2087C0AE007FAF59 /* ALMainTableItemImage.m */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 		8A8C96CC2076A47A0015ADB2 = {
@@ -408,6 +438,15 @@
 				CD38C46CD38E75A3A33BF3B1 /* Modules */,
 			);
 			path = MainUserStory;
+			sourceTree = "<group>";
+		};
+		8A8F31D420877EEB00F9C026 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A4CFCB22087C685007FAF59 /* Items */,
+				8A4CFCB12087C67F007FAF59 /* Cells */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8AA866C42077F3B50037C232 /* Constants */ = {
@@ -870,6 +909,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA866F82077F69B0037C232 /* ALAlertManager.m in Sources */,
+				8A8F31D720877F2D00F9C026 /* ALMainTableCell.m in Sources */,
 				8A8C96E82076A47A0015ADB2 /* main.m in Sources */,
 				8A8C96DA2076A47A0015ADB2 /* AppDelegate.m in Sources */,
 				8AA866F42077F69B0037C232 /* ALAlertAction.m in Sources */,
@@ -884,6 +924,7 @@
 				9F51CBBD88E65FE5822816A3 /* ALLoginViewController.m in Sources */,
 				8AA866DC2077F4980037C232 /* UIFont+ALFonts.m in Sources */,
 				8AA866E62077F4C10037C232 /* ALLocationService.m in Sources */,
+				8A4CFCB02087C0AE007FAF59 /* ALMainTableItemImage.m in Sources */,
 				8AA866FE2077F7D30037C232 /* ALRootRouter.m in Sources */,
 				8AA866F62077F69B0037C232 /* ALAletViewController.m in Sources */,
 				8A8C97272076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m in Sources */,
@@ -895,6 +936,7 @@
 				8A6525A29D9EE390292B2A3F /* ALMainRouter.m in Sources */,
 				6DD8B611494E8AA69CDE03F5 /* ALMainInteractor.m in Sources */,
 				A9156B6350DDDBC716F08C68 /* ALMainPresenter.m in Sources */,
+				8A8F31DA20877FE900F9C026 /* ALMainTableItem.m in Sources */,
 				C2CDA46199D19DA1052E72BC /* ALMainViewController.m in Sources */,
 				662964F66CE4F71442647584 /* ALMainView.m in Sources */,
 			);
