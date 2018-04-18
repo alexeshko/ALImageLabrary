@@ -10,4 +10,8 @@
 
 @protocol ALMainRouterInput <NSObject>
 
+- (void)closeMainModule;
+
+- (void)openMainDetailModule;
+
 @end

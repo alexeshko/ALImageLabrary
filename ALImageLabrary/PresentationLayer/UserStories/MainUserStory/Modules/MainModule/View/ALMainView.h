@@ -6,8 +6,10 @@
 //  Copyright © 2018 HomeSolutions. All rights reserved.
 //
 
-#import "STView.h"
+#import "ALView.h"
 
-@interface ALMainView : STView
+@interface ALMainView : ALView
+
+@property (strong, nonatomic, readonly) UICollectionView *collectionView;
 
 @end

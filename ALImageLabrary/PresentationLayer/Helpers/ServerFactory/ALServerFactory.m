@@ -12,7 +12,16 @@
 
 #import <RestKit/RestKit.h>
 
+#import "ALMainTableItem.h"
+#import "ALMainTableItemImage.h"
+
 static id _sharedFactory;
+
+@interface ALServerFactory () {
+    RKResponseDescriptor *_responseDescriptor;
+}
+
+@end
 
 @implementation ALServerFactory
 
@@ -28,9 +37,39 @@ static id _sharedFactory;
     self = [super init];
     if (self) {
         AFRKHTTPClient *client = [[AFRKHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:ALServerBaseURL]];
+        [client setDefaultHeader:@"Authorization" value:@"Client-ID e254a73ec4dd21e"];
         [RKObjectManager setSharedManager:[[RKObjectManager alloc] initWithHTTPClient:client]];
     }
     return self;
+}
+
+- (void)requestCollectionItemsWithPage:(NSInteger)page completionHandler:(void (^)(id data))completion {
+    RKObjectMapping *collectionItemMapping = [RKObjectMapping mappingForClass:[ALMainTableItem class]];
+    [collectionItemMapping addAttributeMappingsFromDictionary:@{
+                                                                @"cover" : @"itemCoverId",
+                                                                @"account_url" : @"itemAuthor"
+                                                                }];
+    
+    RKObjectMapping *collectionItemImageMapping = [RKObjectMapping mappingForClass:[ALMainTableItemImage class]];
+    [collectionItemImageMapping addAttributeMappingsFromDictionary:@{
+                                                                     @"id" : @"itemId",
+                                                                     @"type" : @"itemType",
+                                                                     @"link" : @"itemPath",
+                                                                     @"title" : @"itemTitle",
+                                                                     @"description" : @"itemDescription",
+                                                                     @"datetime" : @"itemDate",
+                                                                     @"views" : @"itemViews"
+                                                                     }];
+    
+    [collectionItemMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"images" toKeyPath:@"images" withMapping:collectionItemImageMapping]];
+    
+    _responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:collectionItemMapping method:RKRequestMethodGET pathPattern:ALServerPathPattern keyPath:@"data" statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
+    NSDictionary *serverParameters = @{@"page" : @(page)};
+    
+    [self sendAndHandleMappingRequestWithPathPattern:ALServerPathPattern
+                                          parameters:serverParameters
+                                   completionHandler:completion];
 }
 
 - (void)requestUserCurrentLocationWithCompletionHandler:(void (^)(id data))completion {
@@ -60,30 +99,6 @@ static id _sharedFactory;
         }
     }
     return returnValue;
-}
-
-- (NSString *)getResponseStatusCodeWithData:(id)responseData {
-    NSString *statusCode;
-    if ([responseData isKindOfClass:[NSData class]]) {
-        NSError *error;
-        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData
-                                                                 options:NSJSONReadingMutableContainers
-                                                                   error:&error];
-        responseData = jsonData;
-    }
-    if ([responseData isKindOfClass:[NSArray class]]) {
-        NSArray *responseArray = (NSArray *)responseData;
-        if (responseArray.count) {
-            responseData = responseArray[0];
-        }
-    }
-    if ([responseData isKindOfClass:[NSDictionary class]]) {
-        statusCode = [responseData valueForKey:@"Status"];
-    }
-    else if ([responseData isKindOfClass:[NSError class]]) {
-        statusCode = ALServerCodeError;
-    }
-    return statusCode;
 }
 
 #pragma mark - Provate methods
@@ -117,6 +132,28 @@ static id _sharedFactory;
                                                       completion(error);
                                                   }
                                               }];
+}
+
+- (void)sendAndHandleMappingRequestWithPathPattern:(NSString *)pathPattern
+                                        parameters:(NSDictionary *)parameters
+                                 completionHandler:(void (^)(id data))completion {
+    
+    [[RKObjectManager sharedManager] addResponseDescriptor:_responseDescriptor];
+    [self mappingRequestWithPathPattern:pathPattern parameters:parameters completionHandler:^(id data) {
+        [[RKObjectManager sharedManager] removeResponseDescriptor:_responseDescriptor];
+        completion(data);
+    }];
+}
+
+- (NSString *)getResponseStatusCodeWithData:(id)responseData {
+    NSString *statusCode;
+    if ([responseData isKindOfClass:[NSDictionary class]]) {
+        statusCode = [responseData valueForKey:@"Status"];
+    }
+    else if ([responseData isKindOfClass:[NSError class]]) {
+        statusCode = ALServerCodeError;
+    }
+    return statusCode;
 }
 
 - (NSDictionary *)convertResponseToDictionary:(id)response {

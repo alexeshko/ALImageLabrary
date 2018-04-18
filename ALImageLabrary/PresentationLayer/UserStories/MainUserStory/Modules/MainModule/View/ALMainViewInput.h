@@ -12,4 +12,10 @@
 
 - (void)setupInitialState;
 
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+
+- (void)reloadCollectionView;
+
+- (void)changeNavigationTitleWithPage:(NSInteger)page;
+
 @end

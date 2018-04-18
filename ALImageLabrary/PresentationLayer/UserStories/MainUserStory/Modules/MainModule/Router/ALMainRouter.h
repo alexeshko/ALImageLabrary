@@ -10,10 +10,10 @@
 
 #import "ALMainRouterInput.h"
 
-@protocol STViperModuleTransitionHandler;
+@protocol ALViperModuleTransitionHandler;
 
 @interface ALMainRouter : NSObject <ALMainRouterInput>
 
-@property (nonatomic, weak) id<STViperModuleTransitionHandler> transitionHandler;
+@property (nonatomic, weak) id<ALViperModuleTransitionHandler> transitionHandler;
 
 @end

@@ -13,13 +13,13 @@
  Base URL
  */
 
-static NSString * const ALServerBaseURL = @"https://jsonplaceholder.typicode.com";
+static NSString * const ALServerBaseURL = @"https://api.imgur.com/";
 
 /**
  Path patterns
  */
 
-static NSString * const ALServerPathPattern = @"/json/";
+static NSString * const ALServerPathPattern = @"3/gallery/hot/viral/";
 
 /**
  Server response code

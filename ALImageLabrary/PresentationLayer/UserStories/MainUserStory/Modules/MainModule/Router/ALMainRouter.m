@@ -8,12 +8,18 @@
 
 #import "ALMainRouter.h"
 
-#import "STViperModuleTransitionHandler.h"
+#import "ALViperModuleTransitionHandler.h"
 
 @implementation ALMainRouter
 
 #pragma mark - ALMainRouterInput
 
+- (void)closeMainModule {
+    [self.transitionHandler closeCurrentModuleAnimated:YES];
+}
 
+- (void)openMainDetailModule {
+    // TODO
+}
 
 @end
