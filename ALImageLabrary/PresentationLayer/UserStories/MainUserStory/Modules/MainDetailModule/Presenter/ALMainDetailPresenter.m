@@ -66,14 +66,14 @@ static NSString * const ALMainDetailPresenterPoints = @"points";
     [self.view showShadowViewWithIndicator];
     [self.interactor getCommentsWithGalleryId:galleryId completionHandler:^(id data) {
         if ([self.interactor checkStatusOKFromResponse:data]) {
-            [self populateCollectionItemsFromResponse:data];
+            [self populateCommentsItemsFromResponse:data];
             [self.view reloadTableView];
         }
         [self.view hideShadowViewWithIndicator];
     }];
 }
 
-- (void)populateCollectionItemsFromResponse:(id)response {
+- (void)populateCommentsItemsFromResponse:(id)response {
     if ([response isKindOfClass:[NSArray class]]) {
         [_arrayOfComments removeAllObjects];
         [_arrayOfComments addObjectsFromArray:response];

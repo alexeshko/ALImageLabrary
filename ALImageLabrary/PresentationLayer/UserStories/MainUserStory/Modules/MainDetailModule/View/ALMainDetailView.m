@@ -94,7 +94,7 @@
     [super makeConstraints];
     
     CGFloat mainMargin = 15.f;
-    CGFloat otherMargin = 10.f;
+    CGFloat otherMargin = 20.f;
     CGFloat labelWidth = 70.f;
     
     [self.imageView.topAnchor constraintEqualToAnchor:self.topAnchor constant:mainMargin].active = YES;
@@ -115,7 +115,7 @@
     [_dateStaticLabel.widthAnchor constraintEqualToConstant:labelWidth].active = YES;
     
     [self.dateLabel.topAnchor constraintEqualToAnchor:self.authorLabel.bottomAnchor constant:otherMargin].active = YES;
-    [self.dateLabel.leadingAnchor constraintEqualToAnchor:_dateStaticLabel.trailingAnchor constant:otherMargin].active = YES;
+    [self.dateLabel.leadingAnchor constraintEqualToAnchor:_dateStaticLabel.trailingAnchor constant:mainMargin].active = YES;
     [self.dateLabel.trailingAnchor constraintEqualToAnchor:self.trailingAnchor constant:-mainMargin].active = YES;
     
     [_viewsStaticLabel.topAnchor constraintEqualToAnchor:_dateStaticLabel.bottomAnchor constant:otherMargin].active = YES;
@@ -123,7 +123,7 @@
     [_viewsStaticLabel.widthAnchor constraintEqualToConstant:labelWidth].active = YES;
     
     [self.viewsLabel.topAnchor constraintEqualToAnchor:self.dateLabel.bottomAnchor constant:otherMargin].active = YES;
-    [self.viewsLabel.leadingAnchor constraintEqualToAnchor:_viewsStaticLabel.trailingAnchor constant:otherMargin].active = YES;
+    [self.viewsLabel.leadingAnchor constraintEqualToAnchor:_viewsStaticLabel.trailingAnchor constant:mainMargin].active = YES;
     [self.viewsLabel.trailingAnchor constraintEqualToAnchor:self.trailingAnchor constant:-mainMargin].active = YES;
     
     [_coverIdStaticLabel.topAnchor constraintEqualToAnchor:_viewsStaticLabel.bottomAnchor constant:otherMargin].active = YES;
@@ -131,7 +131,7 @@
     [_coverIdStaticLabel.widthAnchor constraintEqualToConstant:labelWidth].active = YES;
     
     [self.coverIdLabel.topAnchor constraintEqualToAnchor:self.viewsLabel.bottomAnchor constant:otherMargin].active = YES;
-    [self.coverIdLabel.leadingAnchor constraintEqualToAnchor:_coverIdStaticLabel.trailingAnchor constant:otherMargin].active = YES;
+    [self.coverIdLabel.leadingAnchor constraintEqualToAnchor:_coverIdStaticLabel.trailingAnchor constant:mainMargin].active = YES;
     [self.coverIdLabel.trailingAnchor constraintEqualToAnchor:self.trailingAnchor constant:-mainMargin].active = YES;
     
     [_descriptionStaticLabel.topAnchor constraintEqualToAnchor:self.imageView.bottomAnchor constant:mainMargin].active = YES;

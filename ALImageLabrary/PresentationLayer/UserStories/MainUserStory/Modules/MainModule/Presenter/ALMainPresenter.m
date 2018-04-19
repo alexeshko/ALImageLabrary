@@ -15,6 +15,8 @@
 #import "ALMainTableItem.h"
 #import "ALMainTableItemImage.h"
 
+#define ITEMS_MAX 60
+
 @interface ALMainPresenter () {
     NSString *_currentIP;
     NSMutableArray *_collectionItems;
@@ -105,7 +107,7 @@
             if (!item.images.count || [imageItem.itemType isEqualToString:@"image/gif"]) {
                 continue;
             }
-            if (numberOfElement <= 60) {
+            if (numberOfElement <= ITEMS_MAX) {
                 [_collectionItems addObject:item];
                 
                 NSString *path = [imageItem.itemPath stringByDeletingPathExtension];

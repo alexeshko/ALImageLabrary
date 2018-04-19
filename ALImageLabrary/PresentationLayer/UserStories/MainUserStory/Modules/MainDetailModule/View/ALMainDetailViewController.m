@@ -17,6 +17,7 @@
 #import "ALMainTableItem.h"
 #import "ALMainTableItemImage.h"
 
+#import "ALMainDetailTableItem.h"
 #import "ALMainDetailTableCell.h"
 
 #import "UIColor+ALColors.h"
@@ -112,6 +113,13 @@ static NSString * const ALDetailCellId = @"ALDetailCellId";
     [cell configureWithItem:item];
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ALMainDetailTableItem *commentItem = [self.output itemAtIndex:indexPath.row];
+    [self showAlertWithTitle:commentItem.author message:commentItem.comment];
 }
 
 #pragma mark - Private Methods
