@@ -55,10 +55,12 @@
 - (void)makeConstraints {
     [super makeConstraints];
     
+    CGFloat mainMargin = 5.f;
+    
     [self.collectionView.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
-    [self.collectionView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:5.f].active = YES;
-    [self.collectionView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor constant:-5.f].active = YES;
-    [self.collectionView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-5.f].active = YES;
+    [self.collectionView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:mainMargin].active = YES;
+    [self.collectionView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor constant:-mainMargin].active = YES;
+    [self.collectionView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-mainMargin].active = YES;
     
     [_shadowView.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
     [_shadowView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;

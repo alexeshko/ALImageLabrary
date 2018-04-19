@@ -11,16 +11,13 @@
 @protocol ALViperModuleTransitionHandler <NSObject>
 
 // Push behavior of transition
-- (void)openModuleController:(UIViewController *)controller
-                    animated:(BOOL)animated;
+- (void)openModuleController:(UIViewController *)controller animated:(BOOL)animated;
 
 // Present behavior of transition
-- (void)presentModuleController:(UIViewController *)controller
-                       animated:(BOOL)animated;
+- (void)presentModuleController:(UIViewController *)controller animated:(BOOL)animated;
 
 // Simple adding as subview
-- (void)openSubmoduleController:(UIViewController *)controller
-                inContainerView:(UIView *)containerView;
+- (void)openSubmoduleController:(UIViewController *)controller inContainerView:(UIView *)containerView;
 
 // Closed current module
 - (void)closeCurrentModuleAnimated:(BOOL)animated;

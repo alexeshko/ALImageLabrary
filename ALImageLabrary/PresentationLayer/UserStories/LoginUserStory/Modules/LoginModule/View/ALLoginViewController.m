@@ -14,6 +14,9 @@
 #import "ALLoginViewOutput.h"
 #import "UIViewController+ALViperModuleTransitionHandler.h"
 
+static NSString * const ALLoginModuleCity = @"city";
+static NSString * const ALLoginModuleIP = @"ip";
+
 @interface ALLoginViewController ()
 
 @property (nonatomic, strong) ALLoginView *view;
@@ -76,8 +79,8 @@
 }
 
 - (void)userLocationAction:(NSNotification *)notification {
-    NSString *city = [notification.userInfo objectForKey:@"city"];
-    NSString *currentIP = [notification.userInfo objectForKey:@"ip"];
+    NSString *city = [notification.userInfo objectForKey:ALLoginModuleCity];
+    NSString *currentIP = [notification.userInfo objectForKey:ALLoginModuleIP];
     self.view.ipLabel.text = [NSString localizedStringWithFormat:@"%@: %@ | %@: %@", ALLocalize(@"login.yourcity"), city, ALLocalize(@"login.yourip"), currentIP];
     [self.output didTakeCurrentIP:currentIP];
 }
