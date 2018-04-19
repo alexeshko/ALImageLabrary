@@ -26,8 +26,16 @@ static NSString * const ALServerAuthorizationClientID = @"Client-ID e254a73ec4dd
  Path patterns
  */
 
-static NSString * const ALServerGalleryPath = @"3/gallery/hot/viral/";
+static NSString * const ALServerGalleryPath = @"3/gallery/";
+static NSString * const ALServerHotViralPath = @"hot/viral/";
+static NSString * const ALServerCommentsBestPath = @"/comments/best/";
 static NSString * const ALServerLocationPath = @"/json/";
+
+/**
+ Server status
+ */
+
+static NSString * const ALServerStatus = @"status";
 
 /**
  Server response code

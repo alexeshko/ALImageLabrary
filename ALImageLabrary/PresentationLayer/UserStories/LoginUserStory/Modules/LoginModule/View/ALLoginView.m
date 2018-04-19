@@ -39,6 +39,7 @@
         
         _ipLabel = [[UILabel alloc] init];
         self.ipLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        self.ipLabel.numberOfLines = 2;
         self.ipLabel.textColor = [UIColor alMainColorElement];
         self.ipLabel.font = [UIFont alHelveticaNeueThinWithSize:14];
         self.ipLabel.textAlignment = NSTextAlignmentCenter;

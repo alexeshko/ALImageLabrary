@@ -33,6 +33,10 @@
 }
 
 - (void)didTouchJoinButton {
+    if (![self.interactor checkInternetConnectionAvailability]) {
+        [self.view showAlertWithTitle:ALLocalize(@"alert.header") message:ALLocalize(@"alert.noinet")];
+        return;
+    }
     if ([self.interactor checkUserForJoin]) {
         [self.router openMainModuleWithCurrentIP:_currentIP];
     }

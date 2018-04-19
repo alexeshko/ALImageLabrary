@@ -10,4 +10,8 @@
 
 @protocol ALMainDetailRouterInput <NSObject>
 
+- (void)closeMainDetailModule;
+
+- (void)openLoginModule;
+
 @end

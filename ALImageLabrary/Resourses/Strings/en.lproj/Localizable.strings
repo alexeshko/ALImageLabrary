@@ -30,3 +30,14 @@
 // MARK: - Main localizable strings
 
 "main.page" = "Page";
+
+// MARK: - Main detail localizable strings
+
+"maindetail.emptydescription" = "Description is empty";
+"maindetail.points" = "pts";
+"maindetail.author" = "Author:";
+"maindetail.views" = "Views:";
+"maindetail.date" = "Date:";
+"maindetail.coverid" = "Album:";
+"maindetail.description" = "Description";
+"maindetail.comments" = "Comments";

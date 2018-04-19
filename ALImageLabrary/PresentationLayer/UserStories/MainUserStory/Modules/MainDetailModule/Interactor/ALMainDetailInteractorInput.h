@@ -10,4 +10,10 @@
 
 @protocol ALMainDetailInteractorInput <NSObject>
 
+- (void)getCommentsWithGalleryId:(NSString *)galleryId completionHandler:(void (^)(id data))completion;
+
+- (BOOL)checkStatusOKFromResponse:(id)response;
+
+- (BOOL)checkInternetConnectionAvailability;
+
 @end

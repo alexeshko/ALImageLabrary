@@ -12,4 +12,6 @@
 
 - (BOOL)checkUserForJoin;
 
+- (BOOL)checkInternetConnectionAvailability;
+
 @end

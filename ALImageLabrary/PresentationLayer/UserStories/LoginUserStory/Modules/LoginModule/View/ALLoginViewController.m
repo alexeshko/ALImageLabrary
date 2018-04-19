@@ -9,6 +9,8 @@
 #import "ALLoginViewController.h"
 #import "ALLoginView.h"
 
+#import "ALAlertManager.h"
+
 #import "ALLoginViewOutput.h"
 #import "UIViewController+ALViperModuleTransitionHandler.h"
 
@@ -55,6 +57,10 @@
 
 - (void)setupInitialState {
     // Handle initial state
+}
+
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+    [[ALAlertManager sharedManager] showAlertWithTitle:title message:message];
 }
 
 #pragma mark - Private Methods
