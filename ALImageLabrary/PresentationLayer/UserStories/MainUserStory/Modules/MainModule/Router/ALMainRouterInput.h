@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class ALMainTableItem;
+
 @protocol ALMainRouterInput <NSObject>
 
-- (void)closeMainModule;
-
-- (void)openMainDetailModule;
+- (void)openMainDetailModuleWithItem:(ALMainTableItem *)item;
 
 @end

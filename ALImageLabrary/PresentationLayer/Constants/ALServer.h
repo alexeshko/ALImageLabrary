@@ -16,10 +16,18 @@
 static NSString * const ALServerBaseURL = @"https://api.imgur.com/";
 
 /**
+ Authorization
+ */
+
+static NSString * const ALServerAuthorization = @"Authorization";
+static NSString * const ALServerAuthorizationClientID = @"Client-ID e254a73ec4dd21e";
+
+/**
  Path patterns
  */
 
-static NSString * const ALServerPathPattern = @"3/gallery/hot/viral/";
+static NSString * const ALServerGalleryPath = @"3/gallery/hot/viral/";
+static NSString * const ALServerLocationPath = @"/json/";
 
 /**
  Server response code

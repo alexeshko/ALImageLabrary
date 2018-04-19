@@ -19,6 +19,7 @@
     NSString *_currentIP;
     NSMutableArray *_collectionItems;
     NSInteger _currentPage;
+    BOOL isLoadingState;
 }
 
 @end
@@ -40,20 +41,31 @@
     [self.view setupInitialState];
 }
 
-- (void)didTouchQuitButton {
-    [self.router closeMainModule];
-}
-
 - (void)didTouchBackButton {
     if (_currentPage > 0) {
+        if (isLoadingState) {
+            return;
+        }
         _currentPage -= 1;
+        [self.view changeNavigationTitleWithPage:_currentPage];
         [self getCollectionItemsWithPage:_currentPage];
     }
 }
 
 - (void)didTouchNextButton {
+    if (isLoadingState) {
+        return;
+    }
     _currentPage += 1;
+    [self.view changeNavigationTitleWithPage:_currentPage];
     [self getCollectionItemsWithPage:_currentPage];
+}
+
+- (void)didTouchCollectionItemWithIndex:(NSInteger)index {
+    if (_collectionItems.count) {
+        ALMainTableItem *item = [_collectionItems objectAtIndex:index];
+        [self.router openMainDetailModuleWithItem:item];
+    }
 }
 
 - (NSInteger)numberOfRowsInSection {
@@ -71,26 +83,45 @@
         [self.view showAlertWithTitle:ALLocalize(@"alert.header") message:ALLocalize(@"alert.noinet")];
         return;
     }
+    isLoadingState = YES;
+    [_collectionItems removeAllObjects];
+    [self.view reloadCollectionView];
+    [self.view showShadowViewWithIndicator];
     [self.interactor getCollectionItemsWithPage:page completionHandler:^(id data) {
         if ([self.interactor checkStatusOKFromResponse:data]) {
             [self populateCollectionItemsFromResponse:data];
-            [self.view changeNavigationTitleWithPage:page];
+            [self.view hideShadowViewWithIndicator];
             [self.view reloadCollectionView];
+            isLoadingState = NO;
         }
     }];
 }
 
 - (void)populateCollectionItemsFromResponse:(id)response {
     if ([response isKindOfClass:[NSArray class]]) {
-        [_collectionItems removeAllObjects];
         NSInteger numberOfElement = 0;
         for (ALMainTableItem *item in response) {
-            ALMainTableItemImage *itemImage = [item.images firstObject];
-            if (!item.images.count || [itemImage.itemType isEqualToString:@"image/gif"]) {
+            ALMainTableItemImage *imageItem = [item.images firstObject];
+            if (!item.images.count || [imageItem.itemType isEqualToString:@"image/gif"]) {
                 continue;
             }
-            if (numberOfElement <= 30) {
+            if (numberOfElement <= 60) {
                 [_collectionItems addObject:item];
+                
+                NSString *path = [imageItem.itemPath stringByDeletingPathExtension];
+                NSString *extension = [imageItem.itemPath pathExtension];
+                NSString *stringURL = [NSString stringWithFormat:@"%@b.%@", path, extension];
+                
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                    NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:stringURL]];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        imageItem.itemImage = [UIImage imageWithData:imageData];
+                        NSInteger index = [_collectionItems indexOfObject:item];
+                        NSIndexPath *path = [NSIndexPath indexPathForItem:index inSection:0];
+                        [self.view reloadCollectionViewAtIndexPath:path];
+                    });
+                });
+                
                 numberOfElement += 1;
             }
             else {

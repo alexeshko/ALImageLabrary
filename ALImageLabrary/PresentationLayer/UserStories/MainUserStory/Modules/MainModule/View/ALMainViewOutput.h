@@ -14,9 +14,10 @@
 
 - (void)viewDidLoad;
 
-- (void)didTouchQuitButton;
 - (void)didTouchBackButton;
 - (void)didTouchNextButton;
+
+- (void)didTouchCollectionItemWithIndex:(NSInteger)index;
 
 - (NSInteger)numberOfRowsInSection;
 - (ALMainTableItem *)itemAtIndex:(NSInteger)index;

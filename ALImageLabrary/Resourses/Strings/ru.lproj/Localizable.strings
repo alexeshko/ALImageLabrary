@@ -15,6 +15,11 @@
 "general.yes" = "Да";
 "general.no" = "Нет";
 
+// MARK: - Alert localizable strings
+
+"alert.header" = "Внимание!";
+"alert.noinet" = "Проверьте соединение с интернетом";
+
 // MARK: - LoginModules localizable strings
 
 "login.welcome" = "Добро пожаловать";
@@ -22,7 +27,6 @@
 "login.yourip" = "Ваш IP";
 "login.join" = "Войти";
 
-// MARK: - Alert localizable strings
+// MARK: - Main localizable strings
 
-"alert.header" = "Внимание!";
-"alert.noinet" = "Проверьте соединение с интернетом";
+"main.page" = "Страница";

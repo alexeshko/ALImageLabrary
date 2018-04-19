@@ -15,6 +15,11 @@
 "general.yes" = "Yes";
 "general.no" = "No";
 
+// MARK: - Alert localizable strings
+
+"alert.header" = "Caution!";
+"alert.noinet" = "Check your internet connection";
+
 // MARK: - LoginModules localizable strings
 
 "login.welcome" = "Welcome";
@@ -22,7 +27,6 @@
 "login.yourip" = "Your IP";
 "login.join" = "Join";
 
-// MARK: - Alert localizable strings
+// MARK: - Main localizable strings
 
-"alert.header" = "Caution!";
-"alert.noinet" = "Check your internet connection";
+"main.page" = "Page";

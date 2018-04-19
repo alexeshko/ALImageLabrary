@@ -15,6 +15,10 @@
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
 
 - (void)reloadCollectionView;
+- (void)reloadCollectionViewAtIndexPath:(NSIndexPath *)path;
+
+- (void)showShadowViewWithIndicator;
+- (void)hideShadowViewWithIndicator;
 
 - (void)changeNavigationTitleWithPage:(NSInteger)page;
 
