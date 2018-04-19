@@ -15,6 +15,8 @@
 #import "ALMainTableItem.h"
 #import "ALMainTableItemImage.h"
 
+#import "ALMainDetailTableItem.h"
+
 static id _sharedFactory;
 
 @interface ALServerFactory () {
@@ -46,7 +48,7 @@ static id _sharedFactory;
 - (void)requestCollectionItemsWithPage:(NSInteger)page completionHandler:(void (^)(id data))completion {
     RKObjectMapping *collectionItemMapping = [RKObjectMapping mappingForClass:[ALMainTableItem class]];
     [collectionItemMapping addAttributeMappingsFromDictionary:@{
-                                                                @"cover" : @"itemCoverId",
+                                                                @"id" : @"itemCoverId",
                                                                 @"account_url" : @"itemAuthor"
                                                                 }];
     
@@ -63,12 +65,31 @@ static id _sharedFactory;
     
     [collectionItemMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"images" toKeyPath:@"images" withMapping:collectionItemImageMapping]];
     
-    _responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:collectionItemMapping method:RKRequestMethodGET pathPattern:ALServerGalleryPath keyPath:@"data" statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    NSString *fullGalleryPath = [NSString stringWithFormat:@"%@%@", ALServerGalleryPath, ALServerHotViralPath];
+    
+    _responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:collectionItemMapping method:RKRequestMethodGET pathPattern:fullGalleryPath keyPath:@"data" statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
     NSDictionary *serverParameters = @{@"page" : @(page)};
     
-    [self sendAndHandleMappingRequestWithPathPattern:ALServerGalleryPath
+    [self sendAndHandleMappingRequestWithPathPattern:fullGalleryPath
                                           parameters:serverParameters
+                                   completionHandler:completion];
+}
+
+- (void)requestCommentsWithGalleryId:(NSString *)galleryId completionHandler:(void (^)(id data))completion {
+    RKObjectMapping *commentsItemMapping = [RKObjectMapping mappingForClass:[ALMainDetailTableItem class]];
+    [commentsItemMapping addAttributeMappingsFromDictionary:@{
+                                                              @"author" : @"author",
+                                                              @"comment" : @"comment",
+                                                              @"points" : @"points"
+                                                              }];
+    
+    NSString *fullCommentsPath = [NSString stringWithFormat:@"%@%@%@", ALServerGalleryPath, galleryId, ALServerCommentsBestPath];
+    
+    _responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:commentsItemMapping method:RKRequestMethodGET pathPattern:fullCommentsPath keyPath:@"data" statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
+    [self sendAndHandleMappingRequestWithPathPattern:fullCommentsPath
+                                          parameters:nil
                                    completionHandler:completion];
 }
 
@@ -150,7 +171,7 @@ static id _sharedFactory;
 - (NSString *)getResponseStatusCodeWithData:(id)responseData {
     NSString *statusCode;
     if ([responseData isKindOfClass:[NSDictionary class]]) {
-        statusCode = [responseData valueForKey:@"Status"];
+        statusCode = [responseData valueForKey:ALServerStatus];
     }
     else if ([responseData isKindOfClass:[NSError class]]) {
         statusCode = ALServerCodeError;

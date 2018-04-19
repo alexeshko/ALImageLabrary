@@ -8,8 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class ALMainTableItem;
+
 @protocol ALMainDetailViewInput <NSObject>
 
-- (void)setupInitialState;
+- (void)setupInitialStateWithItem:(ALMainTableItem *)item;
+
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+
+- (void)showShadowViewWithIndicator;
+- (void)hideShadowViewWithIndicator;
+
+- (void)reloadTableView;
 
 @end

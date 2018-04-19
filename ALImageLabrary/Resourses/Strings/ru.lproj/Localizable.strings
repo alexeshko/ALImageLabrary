@@ -30,3 +30,14 @@
 // MARK: - Main localizable strings
 
 "main.page" = "Страница";
+
+// MARK: - Main detail localizable strings
+
+"maindetail.emptydescription" = "Описание отсутствует";
+"maindetail.points" = "оч";
+"maindetail.author" = "Автор:";
+"maindetail.views" = "Просмотры:";
+"maindetail.date" = "Дата:";
+"maindetail.coverid" = "Альбом:";
+"maindetail.description" = "Описание";
+"maindetail.comments" = "Комментарии";

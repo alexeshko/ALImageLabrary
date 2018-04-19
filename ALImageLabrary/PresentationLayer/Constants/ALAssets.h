@@ -15,6 +15,7 @@
 
 static NSString * const ALAssetArrowBack = @"ALAssetArrowBack";
 static NSString * const ALAssetArrowNext = @"ALAssetArrowNext";
+static NSString * const ALAssetArrowHome = @"ALAssetArrowHome";
 
 /**
  Brand Elements

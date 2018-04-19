@@ -25,6 +25,9 @@
 // Closed current module
 - (void)closeCurrentModuleAnimated:(BOOL)animated;
 
+// Closed all modules until root module
+- (void)closeAllModulesUntilRootModuleAnimated:(BOOL)animated;
+
 // If current module open as submodule
 - (void)closeCurrentSubmodule;
 

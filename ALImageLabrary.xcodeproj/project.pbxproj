@@ -14,6 +14,8 @@
 		82E3270394B09769406571A7 /* ALMainDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC1C05B84B1438CDDD0258C /* ALMainDetailView.m */; };
 		85D535F9FB21913197D83856 /* ALLoginRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1415E7C065EFFED6255574AE /* ALLoginRouter.m */; };
 		8A4CFCB02087C0AE007FAF59 /* ALMainTableItemImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CFCAF2087C0AE007FAF59 /* ALMainTableItemImage.m */; };
+		8A5638352088E45F0055E5DE /* ALMainDetailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5638342088E45F0055E5DE /* ALMainDetailTableCell.m */; };
+		8A56383A2088E4910055E5DE /* ALMainDetailTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5638392088E4910055E5DE /* ALMainDetailTableItem.m */; };
 		8A6525A29D9EE390292B2A3F /* ALMainRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A12CDE3E64DF327FE1F40FDF /* ALMainRouter.m */; };
 		8A8C96DA2076A47A0015ADB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C96D92076A47A0015ADB2 /* AppDelegate.m */; };
 		8A8C96E22076A47A0015ADB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8C96E12076A47A0015ADB2 /* Assets.xcassets */; };
@@ -100,6 +102,10 @@
 		8970AB076EEB84C084C7E179 /* ALLoginInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginInteractorInput.h; sourceTree = "<group>"; };
 		8A4CFCAE2087C0AE007FAF59 /* ALMainTableItemImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMainTableItemImage.h; sourceTree = "<group>"; };
 		8A4CFCAF2087C0AE007FAF59 /* ALMainTableItemImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALMainTableItemImage.m; sourceTree = "<group>"; };
+		8A5638332088E45F0055E5DE /* ALMainDetailTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMainDetailTableCell.h; sourceTree = "<group>"; };
+		8A5638342088E45F0055E5DE /* ALMainDetailTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALMainDetailTableCell.m; sourceTree = "<group>"; };
+		8A5638382088E4910055E5DE /* ALMainDetailTableItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMainDetailTableItem.h; sourceTree = "<group>"; };
+		8A5638392088E4910055E5DE /* ALMainDetailTableItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALMainDetailTableItem.m; sourceTree = "<group>"; };
 		8A8C96D52076A47A0015ADB2 /* ALImageLabrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALImageLabrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8C96D82076A47A0015ADB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A8C96D92076A47A0015ADB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -255,6 +261,7 @@
 				3F4FCF6EEFD10A846F91153D /* ALMainDetailViewController.m */,
 				38EBE2FAB406C37110B05F40 /* ALMainDetailView.h */,
 				FDC1C05B84B1438CDDD0258C /* ALMainDetailView.m */,
+				8A5638322088E41F0055E5DE /* Models */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,6 +343,33 @@
 				8A8F31D920877FE900F9C026 /* ALMainTableItem.m */,
 				8A4CFCAE2087C0AE007FAF59 /* ALMainTableItemImage.h */,
 				8A4CFCAF2087C0AE007FAF59 /* ALMainTableItemImage.m */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		8A5638322088E41F0055E5DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A5638372088E46D0055E5DE /* Items */,
+				8A5638362088E4680055E5DE /* Cells */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A5638362088E4680055E5DE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A5638332088E45F0055E5DE /* ALMainDetailTableCell.h */,
+				8A5638342088E45F0055E5DE /* ALMainDetailTableCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8A5638372088E46D0055E5DE /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				8A5638382088E4910055E5DE /* ALMainDetailTableItem.h */,
+				8A5638392088E4910055E5DE /* ALMainDetailTableItem.m */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -1013,10 +1047,12 @@
 				8AA866E52077F4C10037C232 /* ALConnectionService.m in Sources */,
 				9F51CBBD88E65FE5822816A3 /* ALLoginViewController.m in Sources */,
 				8AA866DC2077F4980037C232 /* UIFont+ALFonts.m in Sources */,
+				8A5638352088E45F0055E5DE /* ALMainDetailTableCell.m in Sources */,
 				8AA866E62077F4C10037C232 /* ALLocationService.m in Sources */,
 				8A4CFCB02087C0AE007FAF59 /* ALMainTableItemImage.m in Sources */,
 				8AA866FE2077F7D30037C232 /* ALRootRouter.m in Sources */,
 				8AA866F62077F69B0037C232 /* ALAletViewController.m in Sources */,
+				8A56383A2088E4910055E5DE /* ALMainDetailTableItem.m in Sources */,
 				8A8C97272076BDD20015ADB2 /* UIViewController+ALViperModuleTransitionHandler.m in Sources */,
 				8AA866D62077F4830037C232 /* ALDateFormatter.m in Sources */,
 				8B62DE7262795751B4330DF5 /* ALLoginView.m in Sources */,

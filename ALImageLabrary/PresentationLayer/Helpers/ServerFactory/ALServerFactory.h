@@ -13,6 +13,7 @@
 + (instancetype)sharedFactory;
 
 - (void)requestCollectionItemsWithPage:(NSInteger)page completionHandler:(void (^)(id data))completion;
+- (void)requestCommentsWithGalleryId:(NSString *)galleryId completionHandler:(void (^)(id data))completion;
 - (void)requestUserCurrentLocationWithCompletionHandler:(void (^)(id data))completion;
 
 - (BOOL)getResponseStatusOKWithData:(id)responseData;

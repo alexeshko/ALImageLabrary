@@ -10,27 +10,20 @@
 
 @implementation UIViewController (ALViperModuleTransitionHandler)
 
-- (void)openModuleController:(UIViewController *)controller
-                    animated:(BOOL)animated {
+- (void)openModuleController:(UIViewController *)controller animated:(BOOL)animated {
     UIViewController *viewController = [self safeViewController:controller];
-    
-    [self.navigationController pushViewController:viewController
-                                         animated:animated];
+    [self.navigationController pushViewController:viewController animated:animated];
 }
 
-- (void)presentModuleController:(UIViewController *)controller
-                       animated:(BOOL)animated {
+- (void)presentModuleController:(UIViewController *)controller animated:(BOOL)animated {
     UIViewController *viewController = [self safeViewController:controller];
-    
     [self.navigationController presentViewController:viewController
                                             animated:animated
                                           completion:nil];
 }
 
-- (void)openSubmoduleController:(UIViewController *)controller
-                inContainerView:(UIView *)containerView {
+- (void)openSubmoduleController:(UIViewController *)controller inContainerView:(UIView *)containerView {
     UIViewController *viewController = [self safeViewController:controller];
-    
     [self addChildViewController:viewController];
     [containerView addSubview:viewController.view];
     [self makeStretchConstraintOfView:viewController.view];
@@ -39,18 +32,20 @@
 
 - (void)closeCurrentModuleAnimated:(BOOL)animated {
     if (self.navigationController) {
-        // After open module method call
         [self.navigationController popViewControllerAnimated:animated];
     }
     else if (self.beingPresented) {
-        // After present module method call
-        [self dismissViewControllerAnimated:animated
-                                 completion:nil];
+        [self dismissViewControllerAnimated:animated completion:nil];
+    }
+}
+
+- (void)closeAllModulesUntilRootModuleAnimated:(BOOL)animated {
+    if (self.navigationController) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
 
 - (void)closeCurrentSubmodule {
-    // After open submodule method call
     [self willMoveToParentViewController:nil];
     [self.view removeFromSuperview];
     [self removeFromParentViewController];

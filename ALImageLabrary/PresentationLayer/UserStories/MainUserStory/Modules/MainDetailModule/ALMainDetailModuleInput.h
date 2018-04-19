@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class ALMainTableItem;
+
 @protocol ALMainDetailModuleOutput;
 
 @protocol ALMainDetailModuleInput <NSObject>
 
 @property (nonatomic, weak) id<ALMainDetailModuleOutput> moduleOutput;
+
+- (void)configureWithItem:(ALMainTableItem *)item;
 
 @end

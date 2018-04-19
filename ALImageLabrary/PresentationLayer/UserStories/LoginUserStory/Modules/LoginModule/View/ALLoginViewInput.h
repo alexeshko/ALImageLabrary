@@ -12,4 +12,6 @@
 
 - (void)setupInitialState;
 
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+
 @end

@@ -90,10 +90,10 @@
     [self.interactor getCollectionItemsWithPage:page completionHandler:^(id data) {
         if ([self.interactor checkStatusOKFromResponse:data]) {
             [self populateCollectionItemsFromResponse:data];
-            [self.view hideShadowViewWithIndicator];
             [self.view reloadCollectionView];
             isLoadingState = NO;
         }
+        [self.view hideShadowViewWithIndicator];
     }];
 }
 

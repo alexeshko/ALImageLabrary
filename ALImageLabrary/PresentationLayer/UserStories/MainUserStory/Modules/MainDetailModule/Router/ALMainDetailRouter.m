@@ -14,6 +14,12 @@
 
 #pragma mark - ALMainDetailRouterInput
 
+- (void)closeMainDetailModule {
+    [self.transitionHandler closeCurrentModuleAnimated:YES];
+}
 
+- (void)openLoginModule {
+    [self.transitionHandler closeAllModulesUntilRootModuleAnimated:YES];
+}
 
 @end

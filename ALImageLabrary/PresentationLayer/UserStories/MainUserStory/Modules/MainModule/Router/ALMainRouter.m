@@ -10,12 +10,18 @@
 
 #import "ALViperModuleTransitionHandler.h"
 
+#import "ALMainDetailAssembly.h"
+#import "ALMainDetailModuleInput.h"
+
 @implementation ALMainRouter
 
 #pragma mark - ALMainRouterInput
 
 - (void)openMainDetailModuleWithItem:(ALMainTableItem *)item {
-    NSLog(@"%@", item);
+    UIViewController *controller = [ALMainDetailAssembly createModuleWithConfiguration:^(id<ALMainDetailModuleInput> input) {
+        [input configureWithItem:item];
+    }];
+    [self.transitionHandler openModuleController:controller animated:YES];
 }
 
 @end
