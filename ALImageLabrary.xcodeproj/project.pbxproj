@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		45F2FBB402940DD685A36213 /* ALLoginAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F308BFBD324DAC3F73454501 /* ALLoginAssembly.m */; };
+		5E0D447625C132D31348045B /* ALMainDetailAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 935BE77B48E8697053688568 /* ALMainDetailAssembly.m */; };
 		662964F66CE4F71442647584 /* ALMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C182C8CE622129A728471A /* ALMainView.m */; };
 		6DD8B611494E8AA69CDE03F5 /* ALMainInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A6197FCCA087DD0C578C68E9 /* ALMainInteractor.m */; };
+		82E3270394B09769406571A7 /* ALMainDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC1C05B84B1438CDDD0258C /* ALMainDetailView.m */; };
 		85D535F9FB21913197D83856 /* ALLoginRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1415E7C065EFFED6255574AE /* ALLoginRouter.m */; };
 		8A4CFCB02087C0AE007FAF59 /* ALMainTableItemImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CFCAF2087C0AE007FAF59 /* ALMainTableItemImage.m */; };
 		8A6525A29D9EE390292B2A3F /* ALMainRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A12CDE3E64DF327FE1F40FDF /* ALMainRouter.m */; };
@@ -37,12 +39,16 @@
 		8AA866F82077F69B0037C232 /* ALAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866F32077F69B0037C232 /* ALAlertManager.m */; };
 		8AA866FE2077F7D30037C232 /* ALRootRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA866FD2077F7D30037C232 /* ALRootRouter.m */; };
 		8B62DE7262795751B4330DF5 /* ALLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364C3A64E39ADC896E8ECCEE /* ALLoginView.m */; };
+		91D468ECBC787ECF1983A11C /* ALMainDetailRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C73DE947686C65BB28952DBA /* ALMainDetailRouter.m */; };
+		981732FD6084061AF7AB51A1 /* ALMainDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FCF6EEFD10A846F91153D /* ALMainDetailViewController.m */; };
 		9F51CBBD88E65FE5822816A3 /* ALLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6199F08F58FFCDC063697C4 /* ALLoginViewController.m */; };
 		A4DF7627D05E7D415D50DF03 /* ALLoginPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AA9D8E25791DC2ED1CCB20 /* ALLoginPresenter.m */; };
 		A7F631F4DBF336957EB22CFB /* Pods_ALImageLabrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B639F6B5A014C177490C52F /* Pods_ALImageLabrary.framework */; };
 		A9156B6350DDDBC716F08C68 /* ALMainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271E4D396806E44D8DC0B6D /* ALMainPresenter.m */; };
+		B83F4FFD52590C9C2157BE75 /* ALMainDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 71173530B35DC616839FF244 /* ALMainDetailPresenter.m */; };
 		BB23E049E3BCB79FA1B727DB /* ALMainAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD8332244C68C8183A2FA8 /* ALMainAssembly.m */; };
 		C2CDA46199D19DA1052E72BC /* ALMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F537B27CCE77D27C7808777D /* ALMainViewController.m */; };
+		E676A8A17A25A409D9C9CD22 /* ALMainDetailInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD91ED4A5BBEEAC59209032 /* ALMainDetailInteractor.m */; };
 		EE8D97186F7D2C1B5F540006 /* ALLoginInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7F6D16ED6E04E9A7735EB /* ALLoginInteractor.m */; };
 /* End PBXBuildFile section */
 
@@ -65,13 +71,17 @@
 
 /* Begin PBXFileReference section */
 		0823BBC4410C93565434D3D5 /* ALMainViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainViewInput.h; sourceTree = "<group>"; };
+		0BD4322624689E593ED6D31B /* ALMainDetailInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailInteractor.h; sourceTree = "<group>"; };
 		0CD3FC816DA919A15F3627AF /* ALLoginView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginView.h; sourceTree = "<group>"; };
 		1415E7C065EFFED6255574AE /* ALLoginRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginRouter.m; sourceTree = "<group>"; };
 		155BC646854809381FD8793C /* ALLoginInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginInteractor.h; sourceTree = "<group>"; };
+		1EB078A1630661BD8FF2CE33 /* ALMainDetailViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailViewOutput.h; sourceTree = "<group>"; };
 		352E54C107CEC9E42EEB617C /* Pods-ALImageLabrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALImageLabrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALImageLabrary/Pods-ALImageLabrary.release.xcconfig"; sourceTree = "<group>"; };
 		364C3A64E39ADC896E8ECCEE /* ALLoginView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginView.m; sourceTree = "<group>"; };
+		38EBE2FAB406C37110B05F40 /* ALMainDetailView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailView.h; sourceTree = "<group>"; };
 		39AA9D8E25791DC2ED1CCB20 /* ALLoginPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginPresenter.m; sourceTree = "<group>"; };
 		3B639F6B5A014C177490C52F /* Pods_ALImageLabrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALImageLabrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4FCF6EEFD10A846F91153D /* ALMainDetailViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainDetailViewController.m; sourceTree = "<group>"; };
 		40EF3965F63B7A1D66FECFDB /* ALMainViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainViewOutput.h; sourceTree = "<group>"; };
 		413BFF015241AC176192CB5E /* ALMainPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainPresenter.h; sourceTree = "<group>"; };
 		4622165C3A6A74B4296EA831 /* ALMainViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainViewController.h; sourceTree = "<group>"; };
@@ -79,7 +89,12 @@
 		4F4AAD14AD733072D77F40D2 /* ALMainInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainInteractor.h; sourceTree = "<group>"; };
 		5271E4D396806E44D8DC0B6D /* ALMainPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainPresenter.m; sourceTree = "<group>"; };
 		657AA9E6CADCE46CAEB7FB22 /* Pods-ALImageLabrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALImageLabrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALImageLabrary/Pods-ALImageLabrary.debug.xcconfig"; sourceTree = "<group>"; };
+		67FED49F14B00690EC3021BC /* ALMainDetailAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailAssembly.h; sourceTree = "<group>"; };
+		6F771A3ED4561D12ED97B1A2 /* ALMainDetailRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailRouter.h; sourceTree = "<group>"; };
+		71173530B35DC616839FF244 /* ALMainDetailPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainDetailPresenter.m; sourceTree = "<group>"; };
 		756FF7327993F2EFFF606EB4 /* ALMainModuleOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainModuleOutput.h; sourceTree = "<group>"; };
+		77A1B8E6B330BAE609CED497 /* ALMainDetailViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailViewController.h; sourceTree = "<group>"; };
+		7E4780F3968BCE34416B403F /* ALMainDetailInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailInteractorInput.h; sourceTree = "<group>"; };
 		7FAD8332244C68C8183A2FA8 /* ALMainAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainAssembly.m; sourceTree = "<group>"; };
 		84BB5924BE6FFDF7BDD5CB20 /* ALLoginViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginViewInput.h; sourceTree = "<group>"; };
 		8970AB076EEB84C084C7E179 /* ALLoginInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginInteractorInput.h; sourceTree = "<group>"; };
@@ -139,24 +154,33 @@
 		8AA866FD2077F7D30037C232 /* ALRootRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRootRouter.m; sourceTree = "<group>"; };
 		8AA866FF2077FA900037C232 /* ALServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALServer.h; sourceTree = "<group>"; };
 		8AA86701207813620037C232 /* ALNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALNotifications.h; sourceTree = "<group>"; };
+		8D365DEE41EC9A02676057B5 /* ALMainDetailViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailViewInput.h; sourceTree = "<group>"; };
+		935BE77B48E8697053688568 /* ALMainDetailAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainDetailAssembly.m; sourceTree = "<group>"; };
 		A12CDE3E64DF327FE1F40FDF /* ALMainRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainRouter.m; sourceTree = "<group>"; };
 		A25B777E28259BDDABC2D5F2 /* ALMainView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainView.h; sourceTree = "<group>"; };
 		A6197FCCA087DD0C578C68E9 /* ALMainInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainInteractor.m; sourceTree = "<group>"; };
 		A6199F08F58FFCDC063697C4 /* ALLoginViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginViewController.m; sourceTree = "<group>"; };
 		A7C182C8CE622129A728471A /* ALMainView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainView.m; sourceTree = "<group>"; };
+		ADD91ED4A5BBEEAC59209032 /* ALMainDetailInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainDetailInteractor.m; sourceTree = "<group>"; };
 		B2C7F6D16ED6E04E9A7735EB /* ALLoginInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginInteractor.m; sourceTree = "<group>"; };
 		B7A1FAD3F7BAAA156543A3F0 /* ALLoginViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginViewController.h; sourceTree = "<group>"; };
 		BA321CD46EA1849EECA87A49 /* ALMainModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainModuleInput.h; sourceTree = "<group>"; };
+		BE2702ECD157520885C4A22B /* ALMainDetailRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailRouterInput.h; sourceTree = "<group>"; };
 		C05C51A2BBBCF7A3D3012090 /* ALLoginAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginAssembly.h; sourceTree = "<group>"; };
 		C06C331804EEC02D5C1946AC /* ALMainAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainAssembly.h; sourceTree = "<group>"; };
+		C73DE947686C65BB28952DBA /* ALMainDetailRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainDetailRouter.m; sourceTree = "<group>"; };
 		D17B0766042231EA9C39EEA1 /* ALLoginRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginRouterInput.h; sourceTree = "<group>"; };
+		D510DEC5A2B75B491AC44885 /* ALMainDetailModuleOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailModuleOutput.h; sourceTree = "<group>"; };
+		D61F7D45A604560C69690F9C /* ALMainDetailPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailPresenter.h; sourceTree = "<group>"; };
 		D8F306B4B9812511B9A5800C /* ALLoginPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginPresenter.h; sourceTree = "<group>"; };
 		DD69E1708A0BA49A211EB57C /* ALMainRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainRouter.h; sourceTree = "<group>"; };
 		E749B0B153AFD636FC1656EC /* ALMainRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainRouterInput.h; sourceTree = "<group>"; };
+		E8F2B25249B7EF2C4FD81EAE /* ALMainDetailModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainDetailModuleInput.h; sourceTree = "<group>"; };
 		EA8B7D36E63A15966F463A82 /* ALMainInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALMainInteractorInput.h; sourceTree = "<group>"; };
 		F308BFBD324DAC3F73454501 /* ALLoginAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALLoginAssembly.m; sourceTree = "<group>"; };
 		F537B27CCE77D27C7808777D /* ALMainViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainViewController.m; sourceTree = "<group>"; };
 		FC3564E253F0FDB967A5C110 /* ALLoginViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALLoginViewOutput.h; sourceTree = "<group>"; };
+		FDC1C05B84B1438CDDD0258C /* ALMainDetailView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALMainDetailView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +223,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		37E6F4B64BAF69F2CAC801C1 /* MainDetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				E8F2B25249B7EF2C4FD81EAE /* ALMainDetailModuleInput.h */,
+				D510DEC5A2B75B491AC44885 /* ALMainDetailModuleOutput.h */,
+				6A8AFCC1EAA471EFF5E8F4E4 /* Assembly */,
+				865C2891FF022D2E9A6A3B16 /* Router */,
+				71FC28FFD661957C1EA25A2E /* Interactor */,
+				E4E6E2334881CD39FE1348A7 /* Presenter */,
+				40C42D5DEE897703A871B909 /* View */,
+			);
+			path = MainDetailModule;
+			sourceTree = "<group>";
+		};
 		3F4CA192D83138CDADD0AA62 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +244,19 @@
 				5271E4D396806E44D8DC0B6D /* ALMainPresenter.m */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		40C42D5DEE897703A871B909 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D365DEE41EC9A02676057B5 /* ALMainDetailViewInput.h */,
+				1EB078A1630661BD8FF2CE33 /* ALMainDetailViewOutput.h */,
+				77A1B8E6B330BAE609CED497 /* ALMainDetailViewController.h */,
+				3F4FCF6EEFD10A846F91153D /* ALMainDetailViewController.m */,
+				38EBE2FAB406C37110B05F40 /* ALMainDetailView.h */,
+				FDC1C05B84B1438CDDD0258C /* ALMainDetailView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4277342EADBB57A7F9DCB0D9 /* Router */ = {
@@ -238,6 +289,35 @@
 				7FAD8332244C68C8183A2FA8 /* ALMainAssembly.m */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		6A8AFCC1EAA471EFF5E8F4E4 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				67FED49F14B00690EC3021BC /* ALMainDetailAssembly.h */,
+				935BE77B48E8697053688568 /* ALMainDetailAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		71FC28FFD661957C1EA25A2E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7E4780F3968BCE34416B403F /* ALMainDetailInteractorInput.h */,
+				0BD4322624689E593ED6D31B /* ALMainDetailInteractor.h */,
+				ADD91ED4A5BBEEAC59209032 /* ALMainDetailInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		865C2891FF022D2E9A6A3B16 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BE2702ECD157520885C4A22B /* ALMainDetailRouterInput.h */,
+				6F771A3ED4561D12ED97B1A2 /* ALMainDetailRouter.h */,
+				C73DE947686C65BB28952DBA /* ALMainDetailRouter.m */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		8A4CFCB12087C67F007FAF59 /* Cells */ = {
@@ -665,6 +745,7 @@
 			isa = PBXGroup;
 			children = (
 				BF48164C03F25DCA13496530 /* MainModule */,
+				37E6F4B64BAF69F2CAC801C1 /* MainDetailModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -686,6 +767,15 @@
 				352E54C107CEC9E42EEB617C /* Pods-ALImageLabrary.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E4E6E2334881CD39FE1348A7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D61F7D45A604560C69690F9C /* ALMainDetailPresenter.h */,
+				71173530B35DC616839FF244 /* ALMainDetailPresenter.m */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		F2CBE13C9FD03E820660183A /* Router */ = {
@@ -939,6 +1029,12 @@
 				8A8F31DA20877FE900F9C026 /* ALMainTableItem.m in Sources */,
 				C2CDA46199D19DA1052E72BC /* ALMainViewController.m in Sources */,
 				662964F66CE4F71442647584 /* ALMainView.m in Sources */,
+				5E0D447625C132D31348045B /* ALMainDetailAssembly.m in Sources */,
+				91D468ECBC787ECF1983A11C /* ALMainDetailRouter.m in Sources */,
+				E676A8A17A25A409D9C9CD22 /* ALMainDetailInteractor.m in Sources */,
+				B83F4FFD52590C9C2157BE75 /* ALMainDetailPresenter.m in Sources */,
+				981732FD6084061AF7AB51A1 /* ALMainDetailViewController.m in Sources */,
+				82E3270394B09769406571A7 /* ALMainDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
