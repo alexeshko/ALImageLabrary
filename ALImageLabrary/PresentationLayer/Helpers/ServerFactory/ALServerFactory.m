@@ -37,7 +37,7 @@ static id _sharedFactory;
     self = [super init];
     if (self) {
         AFRKHTTPClient *client = [[AFRKHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:ALServerBaseURL]];
-        [client setDefaultHeader:@"Authorization" value:@"Client-ID e254a73ec4dd21e"];
+        [client setDefaultHeader:ALServerAuthorization value:ALServerAuthorizationClientID];
         [RKObjectManager setSharedManager:[[RKObjectManager alloc] initWithHTTPClient:client]];
     }
     return self;
@@ -63,18 +63,18 @@ static id _sharedFactory;
     
     [collectionItemMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"images" toKeyPath:@"images" withMapping:collectionItemImageMapping]];
     
-    _responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:collectionItemMapping method:RKRequestMethodGET pathPattern:ALServerPathPattern keyPath:@"data" statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    _responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:collectionItemMapping method:RKRequestMethodGET pathPattern:ALServerGalleryPath keyPath:@"data" statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
     NSDictionary *serverParameters = @{@"page" : @(page)};
     
-    [self sendAndHandleMappingRequestWithPathPattern:ALServerPathPattern
+    [self sendAndHandleMappingRequestWithPathPattern:ALServerGalleryPath
                                           parameters:serverParameters
                                    completionHandler:completion];
 }
 
 - (void)requestUserCurrentLocationWithCompletionHandler:(void (^)(id data))completion {
     AFRKHTTPClient* client = [AFRKHTTPClient clientWithBaseURL:[NSURL URLWithString:ALServerServiceURLForIPApi]];
-    [client getPath:ALServerPathPattern parameters:nil success:^(AFRKHTTPRequestOperation *operation, id responseObject) {
+    [client getPath:ALServerLocationPath parameters:nil success:^(AFRKHTTPRequestOperation *operation, id responseObject) {
         if (completion) {
             completion(responseObject);
         }
@@ -103,8 +103,10 @@ static id _sharedFactory;
 
 #pragma mark - Provate methods
 
-- (void)simpleRequestWithParameters:(NSDictionary *)parameters completionHandler:(void (^)(id data))completion {
-    [[RKObjectManager sharedManager].HTTPClient getPath:ALServerPathPattern
+- (void)simpleRequestWithPathPattern:(NSString *)pathPattern
+                          parameters:(NSDictionary *)parameters
+                   completionHandler:(void (^)(id data))completion {
+    [[RKObjectManager sharedManager].HTTPClient getPath:pathPattern
                                              parameters:parameters
                                                 success:^(AFRKHTTPRequestOperation *operation, id responseObject) {
                                                     if (completion) {

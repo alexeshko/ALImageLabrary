@@ -16,6 +16,8 @@
 
 #import "ALMainTableCell.h"
 
+#import "UIColor+ALColors.h"
+
 static NSString * const ALMainCellId = @"ALMainCellId";
 
 @interface ALMainViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -45,24 +47,26 @@ static NSString * const ALMainCellId = @"ALMainCellId";
 #pragma mark - ALMainViewInput
 
 - (void)setupInitialState {
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Назад"
-                                                                   style:UIBarButtonItemStyleDone
-                                                                  target:self
-                                                                  action:@selector(quitAction)];
-    
-    UIBarButtonItem *rigthButtonBack = [[UIBarButtonItem alloc] initWithTitle:@"< "
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:ALAssetArrowBack]
                                                                    style:UIBarButtonItemStyleDone
                                                                   target:self
                                                                   action:@selector(backAction)];
     
-    UIBarButtonItem *rigthButtonNext = [[UIBarButtonItem alloc] initWithTitle:@" >"
+    UIBarButtonItem *rigthButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:ALAssetArrowNext]
                                                                         style:UIBarButtonItemStyleDone
                                                                        target:self
                                                                        action:@selector(nextAction)];
     
+    leftButton.tintColor = [UIColor alMainColorElement];
+    rigthButton.tintColor = [UIColor alMainColorElement];
+    
     self.navigationItem.leftBarButtonItem = leftButton;
-    self.navigationItem.title = [NSString stringWithFormat:@"Страница 0"];
-    self.navigationItem.rightBarButtonItems = @[rigthButtonNext, rigthButtonBack];
+    self.navigationItem.rightBarButtonItem = rigthButton;
+    
+    self.view.titleLabel.text = [NSString stringWithFormat:@"%@ 0", ALLocalize(@"main.page")];
+    
+    self.navigationItem.titleView = self.view.titleLabel;
+    [self.navigationItem.titleView sizeToFit];
 }
 
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
@@ -73,8 +77,23 @@ static NSString * const ALMainCellId = @"ALMainCellId";
     [self.view.collectionView reloadData];
 }
 
+- (void)reloadCollectionViewAtIndexPath:(NSIndexPath *)path {
+    [self.view.collectionView reloadItemsAtIndexPaths:@[path]];
+}
+
+- (void)showShadowViewWithIndicator {
+    self.view.shadowView.hidden = NO;
+    [self.view.indicatorView startAnimating];
+}
+
+- (void)hideShadowViewWithIndicator {
+    self.view.shadowView.hidden = YES;
+    [self.view.indicatorView stopAnimating];
+}
+
 - (void)changeNavigationTitleWithPage:(NSInteger)page {
-    self.navigationItem.title = [NSString stringWithFormat:@"Страница %ld", (long)page];
+    self.view.titleLabel.text = [NSString stringWithFormat:@"%@ %ld", ALLocalize(@"main.page"), (long)page];
+    self.navigationItem.titleView = self.view.titleLabel;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -93,22 +112,16 @@ static NSString * const ALMainCellId = @"ALMainCellId";
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat availableWidth = self.view.collectionView.frame.size.width - 20.f;
-    CGFloat widthPerItem   = availableWidth / 3;
-    return CGSizeMake(widthPerItem, widthPerItem);
+    return [self getSizeForItem];
 }
 
 #pragma mark - UICollectionViewDataSource
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [self.output didTouchCollectionItemWithIndex:indexPath.row];
 }
 
 #pragma mark - Private Methods
-
-- (void)quitAction {
-    [self.output didTouchQuitButton];
-}
 
 - (void)backAction {
     [self.output didTouchBackButton];
@@ -116,6 +129,12 @@ static NSString * const ALMainCellId = @"ALMainCellId";
 
 - (void)nextAction {
     [self.output didTouchNextButton];
+}
+
+- (CGSize)getSizeForItem {
+    CGFloat availableWidth = self.view.collectionView.frame.size.width - 20.f;
+    CGFloat widthPerItem   = availableWidth / 3;
+    return CGSizeMake(widthPerItem, widthPerItem);
 }
 
 @end

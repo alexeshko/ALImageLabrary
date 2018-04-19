@@ -18,4 +18,6 @@
 @property(strong, nonatomic) NSString *itemDate;
 @property(strong, nonatomic) NSString *itemViews;
 
+@property(strong, nonatomic) UIImage *itemImage;
+
 @end

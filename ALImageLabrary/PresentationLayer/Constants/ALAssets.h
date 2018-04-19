@@ -14,23 +14,12 @@
  */
 
 static NSString * const ALAssetArrowBack = @"ALAssetArrowBack";
+static NSString * const ALAssetArrowNext = @"ALAssetArrowNext";
 
 /**
  Brand Elements
  */
 
 static NSString * const ALAssetLogo = @"ALAssetLogo";
-
-/**
- Other backgrounds
- */
-
-static NSString * const ALAssetMenuBackground = @"ALAssetMenuBackground";
-
-/**
- Other elements
- */
-
-static NSString * const ALAssetSearchCategory = @"ALAssetSearchCategory";
 
 #endif /* ALAssets_h */

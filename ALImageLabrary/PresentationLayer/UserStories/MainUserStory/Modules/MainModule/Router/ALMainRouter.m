@@ -14,12 +14,8 @@
 
 #pragma mark - ALMainRouterInput
 
-- (void)closeMainModule {
-    [self.transitionHandler closeCurrentModuleAnimated:YES];
-}
-
-- (void)openMainDetailModule {
-    // TODO
+- (void)openMainDetailModuleWithItem:(ALMainTableItem *)item {
+    NSLog(@"%@", item);
 }
 
 @end
